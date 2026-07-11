@@ -1,5 +1,12 @@
-# Star Org Labs — Documentation
+# Star Org Labs
 
-> 🚧 **Under construction.** Public documentation for **Star Org Labs** — the community behind [StarOrg.tools](https://starorg.tools), a Star Citizen org-management platform (Discord bot + web portal + API).
+> Star Citizen org management, done right — a Discord bot + web portal for running your org's events, fleet, and day-to-day operations.
 
-Docs are published automatically from the main project repository. Full guides are on the way.
+🚧 **Documentation is under construction.** Polished guides — getting started, bot commands, and feature walkthroughs — are on the way.
+
+- **Web app:** https://starorg.tools
+- **Community:** Star Org Labs (Discord)
+
+---
+
+<sub>This site publishes automatically from the project's source repository. Content in this repo is generated — edit the docs at their source.</sub>
