@@ -1,0 +1,131 @@
+/* ================================================================
+   Star Org Labs — Material for MkDocs brand theme
+   ================================================================ */
+
+:root {
+  --md-primary-fg-color: #16233d;
+  --md-primary-fg-color--light: #26364f;
+  --md-primary-fg-color--dark: #0d1526;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.75);
+  --md-accent-fg-color: #38bdf8;
+
+  --sol-blue: #3b82f6;
+  --sol-cyan: #38bdf8;
+  --sol-glow: rgba(56, 189, 248, 0.35);
+}
+
+/* Deep-space dark scheme */
+[data-md-color-scheme="slate"] {
+  --md-hue: 222;
+  --md-default-bg-color: #0a0f1e;
+  --md-code-bg-color: #111a2e;
+  --md-typeset-a-color: var(--sol-cyan);
+}
+
+/* ---------- Hero ---------- */
+.sol-hero {
+  margin: -1.2rem -0.8rem 2.5rem;
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(59, 130, 246, 0.28), transparent 60%),
+    radial-gradient(800px 400px at 85% 10%, rgba(56, 189, 248, 0.18), transparent 55%),
+    linear-gradient(180deg, #0b1220 0%, #0a0f1e 100%);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.sol-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 70% 20%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 40% 70%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 85% 60%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 15% 80%, rgba(255, 255, 255, 0.5), transparent);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.sol-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sol-hero__logo {
+  width: 104px;
+  height: 104px;
+  filter: drop-shadow(0 0 24px var(--sol-glow));
+  margin-bottom: 1rem;
+}
+
+.sol-hero__title {
+  font-size: 3.1rem;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(100deg, #ffffff 20%, var(--sol-cyan) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sol-hero__tagline {
+  font-size: 1.15rem;
+  max-width: 40rem;
+  margin: 0 auto 1.8rem;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.sol-hero__cta .md-button {
+  margin: 0.3rem 0.4rem;
+  border-radius: 2rem;
+  padding: 0.55rem 1.4rem;
+  font-weight: 700;
+}
+
+.sol-hero__cta .md-button--primary {
+  background: linear-gradient(100deg, var(--sol-blue), var(--sol-cyan));
+  border-color: transparent;
+  color: #06121f;
+  box-shadow: 0 8px 24px -8px var(--sol-glow);
+}
+
+.sol-hero__cta .md-button--primary:hover {
+  background: linear-gradient(100deg, #60a5fa, #7dd3fc);
+  color: #06121f;
+}
+
+/* ---------- Feature cards ---------- */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -12px var(--sol-glow);
+}
+
+.md-typeset .grid.cards .lg {
+  color: var(--sol-cyan);
+}
+
+/* ---------- Misc polish ---------- */
+.sol-center {
+  text-align: center;
+}
+
+.md-typeset h2 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
