@@ -435,6 +435,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🎮 Joining the action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-rsi-accounts-rsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your RSI accounts — /rsi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -534,6 +551,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🎮 Joining the action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-rsi-accounts-rsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your RSI accounts — /rsi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -645,8 +679,8 @@ type.</p>
 <td>Sign up <strong>and</strong> bring one of your ships to the fight.</td>
 </tr>
 <tr>
-<td><code>/verify &lt;handle&gt;</code></td>
-<td>Link your <strong>RSI handle</strong> so your org knows who you are in the 'verse.</td>
+<td><code>/rsi verify &lt;handle&gt;</code></td>
+<td>Link and <strong>verify</strong> your <strong>RSI handle</strong> so your org knows who you are in the 'verse.</td>
 </tr>
 <tr>
 <td><code>/timezone &lt;zone&gt;</code></td>
@@ -659,6 +693,34 @@ type.</p>
 </div>
 <p>Once an event is posted, signing up, choosing a role, and picking a ship all happen with
 <strong>buttons and menus</strong> right on the event. <code>/events</code> is usually all you need to type.</p>
+<h3 id="your-rsi-accounts-rsi">Your RSI accounts — <code>/rsi</code><a class="headerlink" href="#your-rsi-accounts-rsi" title="Permanent link">&para;</a></h3>
+<p>You can link more than one RSI handle (e.g. a main and an alt) and pick which is your main.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/rsi verify &lt;handle&gt;</code></td>
+<td>Link and verify an RSI handle to your profile.</td>
+</tr>
+<tr>
+<td><code>/rsi list</code></td>
+<td>See every RSI handle you've linked.</td>
+</tr>
+<tr>
+<td><code>/rsi set-main &lt;handle&gt;</code></td>
+<td>Choose which linked handle is your <strong>main</strong>.</td>
+</tr>
+<tr>
+<td><code>/rsi unlink &lt;handle&gt;</code></td>
+<td>Remove a linked handle.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="your-fleet-mates">🚀 Your fleet &amp; mates<a class="headerlink" href="#your-fleet-mates" title="Permanent link">&para;</a></h2>
 <table>
@@ -771,8 +833,16 @@ type.</p>
 <td>Pull all confirmed attendees into <strong>your</strong> voice channel.</td>
 </tr>
 <tr>
+<td><code>/start_op &lt;id&gt;</code></td>
+<td>Ping/DM signed-up members who aren't in voice yet to join <strong>your</strong> channel.</td>
+</tr>
+<tr>
 <td><code>/refresh_event_embed &lt;id&gt;</code></td>
 <td>Repost the event to the top of the channel.</td>
+</tr>
+<tr>
+<td><code>/create_vcs &lt;id&gt;</code></td>
+<td>Create temp voice channels for the event's teams that don't have one yet.</td>
 </tr>
 <tr>
 <td><code>/templates</code></td>
