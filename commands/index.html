@@ -699,6 +699,8 @@ type.</p>
 using **Advanced permissions** can also grant or restrict whole modules per rank — see
 [Roles &amp; Permissions](permissions.md). A member whose rank lacks a module still sees its
 commands; running one answers privately that their rank doesn't have access.
+
+Every command runs **inside a server** — none of them work in a DM with the bot.
 </code></pre>
 <hr />
 <h2 id="joining-the-action">🎮 Joining the action<a class="headerlink" href="#joining-the-action" title="Permanent link">&para;</a></h2>
@@ -761,7 +763,7 @@ commands; running one answers privately that their rank doesn't have access.
 <td>See every RSI handle you've linked.</td>
 </tr>
 <tr>
-<td><code>/rsi set-main &lt;handle&gt;</code></td>
+<td><code>/rsi set_main &lt;handle&gt;</code></td>
 <td>Choose which linked handle is your <strong>main</strong>.</td>
 </tr>
 <tr>
@@ -770,6 +772,13 @@ commands; running one answers privately that their rank doesn't have access.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Renamed:</strong> <code>/rsi set_main</code> was <code>/rsi set-main</code> up to and including
+<strong>1.0.0-beta.196</strong>. If it doesn't autocomplete, type the underscore version — every
+other command on the bot is snake_case, and this was the odd one out.</p>
+<p>These four work in a DM with the bot as well as in a server: they only ever touch your
+own account.</p>
+</blockquote>
 <hr />
 <h2 id="your-fleet-mates">🚀 Your fleet &amp; mates<a class="headerlink" href="#your-fleet-mates" title="Permanent link">&para;</a></h2>
 <table>
@@ -807,7 +816,7 @@ commands; running one answers privately that their rank doesn't have access.
 <tbody>
 <tr>
 <td><code>/mining start</code></td>
-<td>Kick off a live mining session — track yields and crew right from Discord.</td>
+<td>Kick off a mining session for this channel — the bot posts a thread for it; track yields and crew on the web.</td>
 </tr>
 <tr>
 <td><code>/mining materials</code></td>
@@ -1010,7 +1019,7 @@ commands; running one answers privately that their rank doesn't have access.
 <tbody>
 <tr>
 <td><code>/setup</code></td>
-<td>Quickly create the basic channels and roles the bot needs.</td>
+<td>Quickly create the basic channels and roles the bot needs. Discord shows it to members with <strong>Manage Server</strong>; if your Admin role doesn't have that permission, grant it the command in <strong>Server Settings → Integrations</strong>.</td>
 </tr>
 <tr>
 <td><code>/settings view</code></td>
@@ -1029,12 +1038,8 @@ commands; running one answers privately that their rank doesn't have access.
 <td>List everyone who currently has Officer powers.</td>
 </tr>
 <tr>
-<td><code>/set_officer &lt;member&gt;</code></td>
-<td>Grant (or revoke) Officer for one person directly.</td>
-</tr>
-<tr>
-<td><code>/settings set_uex_key &lt;key&gt;</code></td>
-<td>Add your <strong>UEXCorp</strong> API key for live market data.</td>
+<td><code>/settings set_uex_key</code></td>
+<td>Add your <strong>UEXCorp</strong> API key for live market data (typed into a private pop-up).</td>
 </tr>
 <tr>
 <td><code>/ticket category list</code></td>
