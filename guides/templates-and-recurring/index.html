@@ -574,6 +574,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#planning-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mission-roulette" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -966,6 +977,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#planning-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mission-roulette" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1091,6 +1113,41 @@ to your server default when the template leaves them blank.</p>
 <p><code>days</code> is how far in advance the event posts (default <strong>2 days</strong>), so members have notice.</p>
 <p>A schedule can override the template's announcement channel and ping roles, which means one
 template can serve several schedules that each shout in a different place.</p>
+<hr />
+<h2 id="planning-queue">Planning queue<a class="headerlink" href="#planning-queue" title="Permanent link">&para;</a></h2>
+<p>Want Friday to be Siege of Orison, then Tech Smugglers, then whatever wins the vote? Open the
+<strong>Event Planner</strong> (Events &amp; Ops in the sidebar, or <strong>Open planner</strong> on a schedule card) and
+line the next few weeks up.</p>
+<ul>
+<li><strong>Pick a schedule</strong> at the top. Each row shows the date the op is projected to run on.</li>
+<li><strong>Upvote</strong> the ops you want. Votes are advice for officers, not a draw — tap again to take
+  yours back.</li>
+<li><strong>Officers</strong> can add an op from any template (with a title, description or notes just for
+  that night), drag rows to reorder, <strong>pin</strong> an op to a specific date, remove it, or hit
+  <strong>Sort by votes</strong> once to put the most-wanted first. The queue holds up to 26 ops.</li>
+<li>Each run takes the top of the queue. Once an op is created it shows 🔒 and can no longer be
+  moved or voted on; if the event is cancelled before it starts, the op goes back to the top.</li>
+<li>Dates you are skipping show as <strong>Skipped</strong>, and a date that already has a member vote open
+  shows as <strong>Voting</strong> — the queue leaves both alone.</li>
+<li><strong>History</strong> (collapsed at the bottom) lists what ran, what was cancelled and what was
+  removed.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">The queue comes first</p>
+<p>While anything is queued, the schedule runs the queue instead of opening a vote or
+spinning the roulette. Roulette and polls pick again as soon as the queue is empty.</p>
+</div>
+<p>If two people change the queue at once — a drag, an add, a pin, even a vote — the second
+change is refused and the planner reloads the latest queue, so nobody silently overwrites
+anyone else. Just redo it.</p>
+<p>Everyone sees the "queue comes first" note on the planner when the schedule would otherwise
+vote or spin. Queued ops that have not been created yet also appear on the org dashboard's
+calendar as dashed <strong>planned</strong> entries — click one to open the planner. They turn into
+normal events once the schedule creates them.</p>
+<p>If <strong>Trigger now</strong> can't create the queued op, you'll see "Nothing was scheduled; try
+again" — the queue is unchanged, so it's safe to retry.</p>
+<p>A schedule can also keep an <strong>Upcoming ops</strong> board posted in a Discord channel: pick an
+<strong>Upcoming Ops Board Channel</strong> when you create or edit the schedule.</p>
 <hr />
 <h2 id="mission-roulette">Mission Roulette<a class="headerlink" href="#mission-roulette" title="Permanent link">&para;</a></h2>
 <p>Attach <strong>several</strong> templates to a schedule, turn roulette on, and each occurrence draws one
