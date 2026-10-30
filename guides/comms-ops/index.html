@@ -1102,26 +1102,31 @@ Star Comms shard (Server Settings → External) and is in the Star Comms beta. T
 available in Discord through the <a href="../../commands/#star-comms-voice-ops-beta"><code>/comms</code> commands</a>.</p>
 <h2 id="running-an-op-on-star-comms">Running an op on Star Comms<a class="headerlink" href="#running-an-op-on-star-comms" title="Permanent link">&para;</a></h2>
 <p>Every event and template has a <strong>Voice comms</strong> choice: <strong>Discord</strong>, <strong>Star Comms</strong> or <strong>Both</strong>.
-In the event wizard it is the step after the roster; on the full event form and the template
-form it sits with the voice settings. Star Comms and Both are offered once the shard is linked
-(below) and your server is in the beta.</p>
+In the event wizard it is the <strong>Voice Comms</strong> step after the roster, and on a server with Star
+Comms linked it is the one place for every voice setting: the Meet Up channel and net, and each
+team's Discord channel and net (the roster step is just teams and slots). On the full event form
+and the template form it sits with the voice settings. Star Comms and Both are offered once the
+shard is linked (below) and your server is in the beta.</p>
 <ul>
 <li><strong>Discord</strong> — voice channels in your server, exactly as before.</li>
 <li><strong>Star Comms</strong> — each team gets a Star Comms net.</li>
 <li><strong>Both</strong> — Discord channels and Star Comms nets side by side.</li>
 </ul>
-<p>For each team, pick one of your shard's existing nets, choose <strong>Create a new net…</strong> and name it,
-or leave it with no net. A recurring op or one created from a template gets the template's
-choice. The event's Discord announcement then shows a <strong>Comms</strong> section with each team's net
-(new nets are marked "(new)") and the app download link, plus a <strong>Get Star Comms</strong> button when
-the download link is set in the settings card. If the shard is later unlinked, the section
-quietly disappears and nothing else about the event changes.</p>
-<div class="admonition note">
-<p class="admonition-title">Planned, not yet created</p>
-<p>In this release new nets are saved with the op's plan only; Star Org doesn't create them on
-your shard yet, and assigning members to nets at launch comes later. Create the net in
-Star Comms itself and pick it as an existing net if you need it live today.</p>
-</div>
+<p>Pick a <strong>Meet Up net</strong> for the whole op and a net for each team: one of your shard's existing
+nets, <strong>Create a new net…</strong> with a name, or no net. A recurring op or one created from a
+template gets the template's choice. The event's Discord announcement then shows a <strong>Comms</strong>
+section with the Meet Up net and each team's net and a <strong>Get Star Comms</strong> link and button. The
+link goes to the download link from the settings card, or the Star Comms website when none is
+set. If the shard is later unlinked, the section quietly disappears and nothing else about the
+event changes.</p>
+<p>New nets are created on your shard when the op is saved (it takes a few seconds; "(new)" in the
+announcement turns into the real net). If the shard is down or refuses — for example a plan that
+doesn't include creating nets — the op saves anyway and Star Org tries again on the next save and
+when the op launches. A net Star Org created is removed from the shard when the op ends, is
+cancelled or is deleted — unless another upcoming op still uses it, which then takes it over —
+and nets you picked that already existed are never touched. Copying an op gives the copy its own
+new nets. If the shard is down when an op is deleted outright, its nets stay on the shard. Assigning
+members to nets at launch comes later.</p>
 <p>A global template (made by the Star Org team) can carry a Star Comms choice and "create a net"
 requests, but not your shard's existing nets; a copy into a server without Star Comms falls
 back to Discord.</p>

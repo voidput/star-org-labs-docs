@@ -1080,17 +1080,21 @@ and attendance and loot settle themselves.</p>
 <p>Open <strong>Events &amp; Ops → Events</strong> and create an event. You get a guided <strong>wizard</strong> that walks
 you through the mission, and a drag-and-drop <strong>board</strong> if you'd rather shape the roster by
 hand — same event, two ways of building it.</p>
-<p>The wizard is six steps in both <strong>Basic</strong> and <strong>Advanced</strong>: the basics (game, template,
-title, organizer), when and where, the roster, <strong>voice comms</strong>, announcements (reminders, ping
-roles, the announce channel, sharing) and a review with the Discord embed preview. Advanced
+<p>The wizard is five steps in both <strong>Basic</strong> and <strong>Advanced</strong>: the basics (game, template,
+title, organizer), when and where, the roster, announcements (reminders, ping roles, the
+announce channel, sharing) and a review with the Discord embed preview. A server with Star
+Comms linked gets a sixth, <strong>voice comms</strong>, after the roster. Pings start as the game's own
+ping roles (or the server default) and follow a game change until you edit them. Advanced
 only adds depth to the roster step (nested assets); nothing about who gets told, or where, is
 hidden behind it.</p>
 <p><strong>Voice comms</strong> is where you pick how the op talks: <strong>Discord</strong> (voice channels in your server,
-exactly as before), <strong>Star Comms</strong>, or <strong>Both</strong>. Star Comms and Both appear once your server has
-linked a Star Comms shard and is in the Star Comms beta; until then the step shows Discord only,
-with a link to Server Settings → External. With Star Comms, each team gets a net — pick one of
-your shard's existing nets or name a new one — and the Discord announcement gains a <strong>Comms</strong>
-section listing the nets and a <strong>Get Star Comms</strong> button. The same choice is on the full event
+exactly as before), <strong>Star Comms</strong>, or <strong>Both</strong> — and it holds every voice setting: the Meet Up
+channel and net, and each team's Discord channel and net (on that server the roster step is just
+teams and slots). It appears once your server has linked a Star Comms shard and is in the Star
+Comms beta; until then the team voice channels stay on the roster step. With Star Comms, the op
+and each team get a net — pick one of your shard's existing nets or name a new one, created on
+the shard when you save — and the Discord announcement gains a <strong>Comms</strong> section listing the
+nets and a <strong>Get Star Comms</strong> button. The same choice is on the full event
 form and on <a href="../templates-and-recurring/">templates</a>. See
 <a href="../comms-ops/#running-an-op-on-star-comms">Running an op on Star Comms</a>.</p>
 <p>An event carries:</p>
@@ -1202,6 +1206,13 @@ call was premature.</p>
 roster instead of three. Members of an allied server see the shared event in <code>/events</code> and
 sign up from their own Discord. Events that belong to another org and were never shared with
 you stay invisible — an event id from someone else's server simply answers "not found."</p>
+<p>When you create an op, the <strong>Share with allies</strong> section (Announcements step) lets you pick an
+alliance and send it to <strong>all allied servers</strong>, which includes servers that join later, or to
+<strong>selected servers</strong> only. Allied servers that can't receive it, because their seat has event
+sharing turned off or they haven't accepted the invite yet, are shown greyed out with the
+reason. <strong>Other servers</strong> shares directly with orgs outside your alliances that trust yours.
+After sharing, you're told which servers missed the post and why, for example "no events
+channel set".</p>
 <hr />
 <p><strong>Next:</strong> <a href="../templates-and-recurring/">Templates &amp; Recurring Ops</a> ·
 <a href="../loot/">Loot Hub</a> · <a href="../fleet/">Fleet &amp; Hangar</a></p>
