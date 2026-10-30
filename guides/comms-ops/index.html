@@ -1117,16 +1117,32 @@ nets, <strong>Create a new net…</strong> with a name, or no net. A recurring o
 template gets the template's choice. The event's Discord announcement then shows a <strong>Comms</strong>
 section with the Meet Up net and each team's net and a <strong>Get Star Comms</strong> link and button. The
 link goes to the download link from the settings card, or the Star Comms website when none is
-set. If the shard is later unlinked, the section quietly disappears and nothing else about the
-event changes.</p>
+set. On a <strong>Star Comms</strong>-only op the announcement no longer shows the Discord "Meetup Channel"
+line — the Comms section's <strong>Meet Up → net</strong> is where people gather (a <strong>Both</strong> op shows the two).
+If the shard is later unlinked, the section quietly disappears and nothing else about the event
+changes.</p>
+<p>Teams and nets can also be changed from the event page: open the op, and in <strong>Mission
+Structure</strong> press <strong>Manage Nets</strong> (<strong>Manage Voice</strong> on a Both op). Each team has a <strong>Team net</strong>
+picker with the same choices as the wizard; a Star Comms-only op hides the Discord channel
+pickers there, and Fleet Command shows each team's net instead of its voice channel.</p>
 <p>New nets are created on your shard when the op is saved (it takes a few seconds; "(new)" in the
 announcement turns into the real net). If the shard is down or refuses — for example a plan that
 doesn't include creating nets — the op saves anyway and Star Org tries again on the next save and
 when the op launches. A net Star Org created is removed from the shard when the op ends, is
 cancelled or is deleted — unless another upcoming op still uses it, which then takes it over —
 and nets you picked that already existed are never touched. Copying an op gives the copy its own
-new nets. If the shard is down when an op is deleted outright, its nets stay on the shard. Assigning
-members to nets at launch comes later.</p>
+new nets. If the shard is down when an op is deleted outright, its nets stay on the shard.</p>
+<p><strong>Putting people on their nets.</strong> Everyone signed up to a Star Comms (or Both) op is assigned on
+your shard to their <strong>team's net</strong> and the op's <strong>Meet Up net</strong> — a few seconds after they sign
+up, swap team or ship, or are moved by an officer, and again whenever a new net is created for
+the op. Tentative and late signups count; benched, pending and declined ones don't. Members
+from allied servers are assigned too. Star Comms lets a member sit on several nets, so this only
+<strong>adds</strong> nets: someone who was already on a net keeps it, and when they withdraw, change team, or
+the op ends or is cancelled, Star Org takes back only the nets <strong>it</strong> gave them — never one they
+already had or one another upcoming op still gives them. A member the shard doesn't know (not
+on your Star Comms roster yet) is skipped and everyone else is still assigned; they're picked
+up on the next change after they join. If the shard is down nothing is lost: the next signup
+change tries again.</p>
 <p>A global template (made by the Star Org team) can carry a Star Comms choice and "create a net"
 requests, but not your shard's existing nets; a copy into a server without Star Comms falls
 back to Discord.</p>
