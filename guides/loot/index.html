@@ -575,6 +575,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#changing-a-hub-after-it-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing a hub after it started
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-hub-without-bidding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running a hub without bidding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-discord-sees" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -989,6 +1011,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#changing-a-hub-after-it-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing a hub after it started
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-hub-without-bidding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running a hub without bidding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-discord-sees" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1099,8 +1143,8 @@ happens.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>/loot create &lt;name&gt; [event] [points] [sync_vc]</code></td>
-<td>Open a session. <code>points</code> defaults to <strong>100</strong>; <code>sync_vc</code> adds everyone in your current voice channel</td>
+<td><code>/loot create &lt;name&gt; [event] [points] [sync_vc] [admin_only]</code></td>
+<td>Open a session. <code>points</code> defaults to <strong>100</strong>; <code>sync_vc</code> adds everyone in your current voice channel; <code>admin_only</code> runs it without a seat for you</td>
 </tr>
 <tr>
 <td><code>/loot roll &lt;session&gt;</code></td>
@@ -1112,8 +1156,22 @@ happens.</p>
 </tr>
 </tbody>
 </table>
-<p>Linking the session to an event pulls its attendees in for you. <code>sync_vc</code> is the fast path
-when the crew is already in voice.</p>
+<p><code>sync_vc</code> is the fast path when the crew is already in voice.</p>
+<h3 id="changing-a-hub-after-it-started">Changing a hub after it started<a class="headerlink" href="#changing-a-hub-after-it-started" title="Permanent link">&para;</a></h3>
+<p>The hub's <strong>Admin</strong> tab has two cards for an open hub:</p>
+<ul>
+<li><strong>Hub Settings</strong>: change the voice channel, the text channel or the linked event (loot
+  managers only, as when creating). You can also change the payout method until someone
+  has been paid, and switch the distribution mode of every item nobody has won yet.
+  Moving the text channel starts a fresh thread there and reposts the manifest.</li>
+<li><strong>Add Participants</strong>: pick members, <strong>Add everyone in voice</strong>, or <strong>Add event
+  attendees</strong> once an event is linked. New seats start with the same points as joining
+  yourself. People already in the hub are skipped, and it works on a locked hub.</li>
+</ul>
+<h3 id="running-a-hub-without-bidding">Running a hub without bidding<a class="headerlink" href="#running-a-hub-without-bidding" title="Permanent link">&para;</a></h3>
+<p>Tick <strong>Run as admin only</strong> when you create the hub, or later in Hub Settings. You and your
+co-hosts are then not seated, can't bid, and are skipped by voice and on-time point
+awards. Turning it on later removes your seat only if you have no bids or wins in the hub.</p>
 <h3 id="what-discord-sees">What Discord sees<a class="headerlink" href="#what-discord-sees" title="Permanent link">&para;</a></h3>
 <p>The session gets its own thread, and the thread stays readable:</p>
 <table>
