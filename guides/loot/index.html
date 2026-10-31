@@ -1163,7 +1163,13 @@ happens.</p>
 <li><strong>Hub Settings</strong>: change the voice channel, the text channel or the linked event (loot
   managers only, as when creating). You can also change the payout method until someone
   has been paid, and switch the distribution mode of every item nobody has won yet.
-  Moving the text channel starts a fresh thread there and reposts the manifest.</li>
+  Moving the text channel starts a fresh thread there and reposts the manifest.
+  You can change the <strong>point pool</strong>: everyone's points move by the difference, so what
+  they already spent or were awarded is kept (raise 100 to 150 and a member on 40 goes to
+  90). A pool that would leave someone below zero is refused. Loot managers can also
+  switch <strong>guild points</strong> on or off, but only before anyone has bid, won, been awarded
+  points or been topped up by <strong>Next round</strong>. Everyone's points then restart from the new
+  source: their guild points, or the point pool.</li>
 <li><strong>Add Participants</strong>: pick members, <strong>Add everyone in voice</strong>, or <strong>Add event
   attendees</strong> once an event is linked. New seats start with the same points as joining
   yourself. People already in the hub are skipped, and it works on a locked hub.</li>
@@ -1171,7 +1177,13 @@ happens.</p>
 <h3 id="running-a-hub-without-bidding">Running a hub without bidding<a class="headerlink" href="#running-a-hub-without-bidding" title="Permanent link">&para;</a></h3>
 <p>Tick <strong>Run as admin only</strong> when you create the hub, or later in Hub Settings. You and your
 co-hosts are then not seated, can't bid, and are skipped by voice and on-time point
-awards. Turning it on later removes your seat only if you have no bids or wins in the hub.</p>
+awards. Turning it on later removes your seat only if you have no bids, wins or awarded
+points in the hub. Round top-ups and pool changes don't count, since everyone has them.</p>
+<p>In a guild-points hub you can also tick <strong>Still credit admins for on-time attendance</strong>.
+The on-time award then adds the same guild points to you and your co-hosts as to everyone
+else who arrived on time, once per hub, without seating you. Voice awards still skip you.
+A hub on its own point pool has no lasting points to credit, so the option isn't shown
+there.</p>
 <h3 id="what-discord-sees">What Discord sees<a class="headerlink" href="#what-discord-sees" title="Permanent link">&para;</a></h3>
 <p>The session gets its own thread, and the thread stays readable:</p>
 <table>
