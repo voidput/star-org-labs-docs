@@ -484,6 +484,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#your-first-visit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your first visit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your first visit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guided-tours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guided tours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1016,6 +1044,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#your-first-visit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your first visit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your first visit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guided-tours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guided tours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1125,17 +1181,59 @@ your org from. You'll need permission to add a bot to that server.</p>
 </tbody>
 </table>
 <h2 id="3-set-up-your-org">3. Set up your org<a class="headerlink" href="#3-set-up-your-org" title="Permanent link">&para;</a></h2>
-<p>From <strong>Server Settings</strong>, make it yours:</p>
+<p>When the bot joins, it posts a short welcome in your server with a <strong>Start setup</strong> button and
+pings whoever added it (or the server owner, when Discord doesn't say who). It also sends that
+person a DM with the same link. The button opens the <strong>setup wizard</strong>, which a server admin
+works through in four steps:</p>
+<ol>
+<li><strong>Essentials</strong>: your events channel, and the roles that count as officers and admins.</li>
+<li><strong>Preflight</strong>: the bot checks it can really post in that channel. Each check reads done,
+   to do, blocked or couldn't check, with what to fix. Nothing here stops you; <strong>Continue
+   anyway</strong> moves on while you sort it out.</li>
+<li><strong>Features &amp; games</strong>: the games your org plays (at least one) and the modules you want on.</li>
+<li><strong>Finish</strong>: your choices grouped by step, each with <strong>Edit</strong>. <strong>Finish setup</strong> saves them.</li>
+</ol>
+<p>The labelled steps along the top show where you are, and the wizard says why <strong>Next</strong> is
+greyed out when it is. Leave halfway and your choices are kept as a draft for next time.
+Already know your way around? <strong>Skip to full settings</strong> goes straight to <strong>Server Settings</strong>.</p>
+<p>Until every essential passes, admins see a <strong>Finish setting up</strong> card on the org dashboard.
+It lists only what is left, with <strong>Continue setup</strong> and <strong>Skip to full settings</strong>, and goes
+away by itself once the bot can post your events. Running <code>/setup</code> in Discord with no options
+links to the wizard too.</p>
+<p>Then make it yours in <strong>Server Settings</strong>:</p>
 <ul>
 <li>Drop in your <strong>org logo</strong></li>
 <li>Pick a <strong>theme</strong> — your manufacturer's colors, or a look of your own</li>
 <li>Configure your <strong>channels</strong> so events and pings land in the right place</li>
-<li>Map your <strong>officer and admin roles</strong> — and see <a href="../permissions/">Roles &amp; Permissions</a>
+<li>Fine-tune your <strong>officer and admin roles</strong> — and see <a href="../permissions/">Roles &amp; Permissions</a>
   for per-rank access control</li>
 </ul>
 <h2 id="4-run-your-first-op">4. Run your first op<a class="headerlink" href="#4-run-your-first-op" title="Permanent link">&para;</a></h2>
 <p>Hit <strong>Create Event</strong>, build out the roster (roles, ships, teams), and share it.
 Your members <strong>sign up straight from Discord</strong> — and you track it all from the web. 🎉</p>
+<hr />
+<h2 id="your-first-visit">Your first visit<a class="headerlink" href="#your-first-visit" title="Permanent link">&para;</a></h2>
+<p>The first time you sign in, a three-step setup gets you oriented:</p>
+<ol>
+<li><strong>Choose Your Path</strong>: Tactical &amp; Ops, Industry &amp; Economy, or Management &amp; Command. It
+   moves that part of the app to the front of the launcher and picks a matching theme.</li>
+<li><strong>Link Your RSI Account</strong> (optional): enter your handle and you get a code to paste into
+   your RSI profile's Short Bio. <strong>Copy code</strong> and <strong>Open RSI profile</strong> are right there, and you
+   can verify on the spot or later in Settings.</li>
+<li><strong>App Walkthroughs</strong> (optional): turn guided tours on or off. This step also recaps your
+   path and RSI link, each with <strong>Edit</strong>.</li>
+</ol>
+<p><strong>Skip setup</strong> (top right) is always there. You can change your path later in <strong>Settings →
+Account &amp; RSI → Your path</strong>; changing it there leaves your theme alone.</p>
+<h3 id="guided-tours">Guided tours<a class="headerlink" href="#guided-tours" title="Permanent link">&para;</a></h3>
+<p>A few pages show a short tour the first time you arrive: the launcher, your homepage, Events
+and RSI verification. Some others offer one when it applies, for example Comms Ops once Star
+Comms is set up, or the Fleet Command board the first time an officer opens it. A tour never
+opens over a dialog, while you're typing or over unsaved changes. Every other page's tour is
+on request: press <strong>Page Help &amp; Tour</strong> in the sidebar.</p>
+<p>Tours follow your account, not your browser. Turn them off with <strong>Show guided tours</strong> in
+<strong>Settings → Account &amp; RSI → Guided tours</strong>, and press <strong>Reset tours</strong> there to see every
+page's tour again.</p>
 <hr />
 <h2 id="whats-next">What's next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <p>Now that the bot is in, here's where everything lives:</p>

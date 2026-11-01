@@ -554,6 +554,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. Fly it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seating-people-from-fleet-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seating people from Fleet Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1018,6 +1035,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. Fly it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seating-people-from-fleet-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seating people from Fleet Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1200,6 +1234,26 @@ they can make.</p>
 <li><strong>Repost</strong> — <code>/refresh_event_embed &lt;id&gt;</code> puts the event back at the bottom of a busy
   channel.</li>
 </ul>
+<h3 id="seating-people-from-fleet-command">Seating people from Fleet Command<a class="headerlink" href="#seating-people-from-fleet-command" title="Permanent link">&para;</a></h3>
+<p><strong>Fleet Command</strong> has two tabs. The <strong>Tactical Board</strong> is for dragging crew and ships around
+in bulk; nothing reaches Discord until you press <strong>Transmit Orders</strong>. The <strong>Wizard</strong> seats one
+member at a time in five steps: <strong>Operative</strong> (who), the team, the ship or station, <strong>Duty</strong>,
+and <strong>Confirm</strong>.</p>
+<ul>
+<li>A step with only one possible answer is filled in for you and marked as skipped on the step
+  rail. Steps you've already been through can be clicked to go back.</li>
+<li>The station and duty steps mark where the member sits now as <strong>Current</strong>. A full duty can
+  still be picked for someone else; it shows as full and is never chosen for you. When you
+  seat yourself, full duties and teams are greyed out with the reason, unless the event has
+  capacity enforcement off.</li>
+<li><strong>Confirm</strong> lists your answers by step, each with <strong>Edit</strong>, and <strong>Back to review</strong> returns.
+  It also shows where the member sits now and, if they are leaving a ship they brought as its
+  pilot, which crew go back to the team pool and what happens to the ship.</li>
+<li>If the save is refused, the reason stays on the Confirm card with <strong>Try again</strong>. An op with
+  no teams says so and offers <strong>Open Tactical Board</strong>.</li>
+<li>Closing Fleet Command with a half-finished assignment asks first. After <strong>Orders
+  Confirmed</strong>, <strong>Assign Another</strong> starts again from the first step.</li>
+</ul>
 <hr />
 <h2 id="4-close-it-out">4. Close it out<a class="headerlink" href="#4-close-it-out" title="Permanent link">&para;</a></h2>
 <p><strong>Attendance is automatic.</strong> At each lifecycle step — and whenever you regather — the bot
@@ -1233,8 +1287,9 @@ alliance and send it to <strong>all allied servers</strong>, which includes serv
 <strong>selected servers</strong> only. Allied servers that can't receive it, because their seat has event
 sharing turned off or they haven't accepted the invite yet, are shown greyed out with the
 reason. <strong>Other servers</strong> shares directly with orgs outside your alliances that trust yours.
-After sharing, you're told which servers missed the post and why, for example "no events
-channel set".</p>
+After sharing, the wizard lists each ally's result, with <strong>Retry</strong> for any that failed (see
+<a href="#1-plan-the-op">Plan the op</a>). The full event form reports the servers that missed the post
+in a message instead.</p>
 <hr />
 <p><strong>Next:</strong> <a href="../templates-and-recurring/">Templates &amp; Recurring Ops</a> ·
 <a href="../loot/">Loot Hub</a> · <a href="../fleet/">Fleet &amp; Hangar</a></p>
