@@ -755,6 +755,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Work Orders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-targets-deliveries-and-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material targets, deliveries and approval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#org-stockpile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Org Stockpile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crafting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crafting
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1017,6 +1056,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Work Orders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-targets-deliveries-and-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material targets, deliveries and approval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#org-stockpile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Org Stockpile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crafting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crafting
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1126,6 +1204,132 @@ someone else holds is for whoever posted it, or an officer — the board only sh
 those people. Reopening a job clears its assignee, so anyone can claim it again. The poster or an
 officer can <strong>Cancel</strong> an open or in-progress job — it stays on the board under the Cancelled
 filter. Only an officer can <strong>Delete</strong> a job outright, after a confirmation, which erases it.</p>
+<h3 id="material-targets-deliveries-and-approval">Material targets, deliveries and approval<a class="headerlink" href="#material-targets-deliveries-and-approval" title="Permanent link">&para;</a></h3>
+<p><em>Rolling out server by server. If your board has no <strong>Awaiting Approval</strong> filter, your server
+doesn't have it yet.</em></p>
+<p><strong>Posting.</strong> The form gains a <strong>Material target</strong> section: pick the material from the
+catalogue, how many <strong>SCU</strong> the org needs, an optional <strong>minimum quality</strong> (the material's
+quality band is shown as you type) and where to deliver. Under <strong>Payout</strong>, choose <strong>aUEC from
+the treasury</strong> (needs a reward), <strong>Material from the stockpile</strong>, <strong>aUEC and material</strong> or
+<strong>No payout</strong>. A material payout names the material, how many SCU it pays and, optionally, the
+minimum quality the paid stock must have.</p>
+<p><strong>Delivering (members).</strong> On an open or in-progress material order, <strong>Log delivery</strong> records
+what you brought: SCU, the quality (required when the order sets a minimum), where it is and a
+note. A delivery below the minimum is still logged — it's flagged amber and an officer decides
+whether it counts. <strong>Deliveries</strong> shows everyone's deliveries on the order; you can
+<strong>Withdraw</strong> your own until it's reviewed. Numbers are what members report: the game can't
+verify them, so your org's officers do.</p>
+<p>From Discord: <strong><code>/workorder deliver</code></strong> logs the same delivery — start typing in <code>order</code> to pick
+one of your org's open material orders, then the SCU and (if the order asks for one) the quality.
+The reply is only visible to you.</p>
+<p><strong>Reviewing (Industry Management).</strong> Officers, and ranks granted <em>Industry Management</em>, open
+<strong>Deliveries</strong> and <strong>Accept</strong> or <strong>Reject</strong> each one. Accepted SCU fills the order's progress
+bar; when it reaches the target, the order moves to <strong>Awaiting approval</strong> by itself. The
+assignee or the poster can also press <strong>Mark done</strong> at any time.</p>
+<p><strong>Approving.</strong> <strong>Approve</strong> completes the order and pays the reward from the
+<a href="../org-command/#org-treasury">Treasury</a> to <strong>one</strong> member — the assignee, or (if nobody took the
+job) a member with an accepted delivery you pick. If the treasury can't cover it, approval is
+refused with <strong>Insufficient funds</strong>; a server admin can force it, with a note saying why, and the
+overdraft is recorded. <strong>Send back</strong> returns the order to in progress with a note. Material
+orders and orders with a reward finish this way — they no longer have a <strong>Complete</strong> button.</p>
+<p><strong>Material payouts.</strong> When an order pays material, <strong>Approve</strong> also asks which stockpile row
+it comes from — only rows of that material, at or above the promised quality, with enough
+available are offered. The SCU is <strong>reserved</strong> for the member (it shows as reserved on the
+Stockpile page) and they get a notification. Once they have it in game, they press
+<strong>Confirm</strong> on the Stockpile page (or an officer does it on the Treasury's <strong>Materials</strong> tab).
+Nothing in the game moves by itself — the confirm is the org's record that the hand-over
+happened. An officer can <strong>Void</strong> a payout that hasn't been confirmed (with a reason), which
+puts the stock back. Officers can also pay material by hand from the Treasury's <strong>Materials</strong>
+tab with <strong>New material payout</strong>.</p>
+<hr />
+<h2 id="org-stockpile">Org Stockpile<a class="headerlink" href="#org-stockpile" title="Permanent link">&para;</a></h2>
+<p><em>Rolling out with Industry v2: the <strong>Org Stockpile</strong> rail entry appears once your server has it.</em></p>
+<p>The stockpile is the org's record of <strong>bulk materials</strong> — how many SCU of each material, at
+which quality, where, and who is holding it. Star Citizen has no org storage and no inventory
+API, so the stockpile is <strong>what your members record</strong>: member-entered, org-verified.</p>
+<p><strong>Members</strong></p>
+<ul>
+<li><strong>Deposit</strong> logs material you hold for the org: pick the material, the quantity in SCU, the
+  quality (1–1000, kept exactly as you type it — leave it empty if you don't know) and where it
+  sits. Tick <strong>I'm holding it</strong> if it's in your own hangar. A deposit counts straight away,
+  unless your org asks officers to confirm each one.</li>
+<li><strong>Balances</strong> shows what the org holds, one row per material, quality and location. Different
+  qualities are never merged, just as they don't stack in game. The quality chip shows the
+  material's band ("554 · 400–599"). <strong>≈ Value</strong> is an estimate at UEX prices.</li>
+<li><strong>Movements</strong> is the history behind every number: who moved what, and when.</li>
+<li>Closing an <strong>org-run</strong> mining session deposits its refined yield automatically, at the run's
+  refinery (whole SCU; quality recorded as unknown). The session screen lists what went in.</li>
+<li>From Discord: <strong><code>/stockpile deposit</code></strong> — pick the material from the list, then the SCU and,
+  optionally, quality, location and a note. It's recorded as held by you; leave out the location
+  and it's recorded as <em>Unspecified</em>. Your org's confirm setting applies the same way.</li>
+</ul>
+<p><strong>Officers (Industry Management)</strong></p>
+<ul>
+<li><strong>Withdraw</strong> and <strong>Adjust</strong> act on one balance row. Adjust is for recounts: "−20" takes 20 SCU
+  off. Nothing can take a balance below zero.</li>
+<li><strong>Confirm</strong> a member's pending deposit, <strong>Void</strong> a pending movement (with a reason), or
+  <strong>Reverse</strong> a confirmed one — mistakes are cancelled with an offsetting line, never deleted.
+  The nightly reconcile's own corrections can't be reversed (the next run would redo them); fix
+  the movement that caused the drift instead. Stock held by someone who has left the org can
+  still be withdrawn or adjusted.</li>
+<li>Server Settings → <strong>Org Stockpile</strong>: deposit org-run session yield (on), officers confirm member
+  deposits (off), nightly reconcile corrects drift (on). If your crew sells its haul <em>and</em>
+  deposits it, it counts twice — turn session deposits off if you sell everything.</li>
+<li>The <strong>Global Server Wipe</strong> also empties the stockpile and its history.</li>
+</ul>
+<p><strong>Reorder thresholds (Industry Management)</strong></p>
+<p>The <strong>Thresholds</strong> tab keeps a material stocked for you. Set a <strong>minimum</strong> (and, if you like, a
+minimum quality and one location — leave them empty to count every quality everywhere) and a
+<strong>reorder</strong> amount. When the stock that is actually available (what is reserved for a hand-over
+doesn't count) drops below the minimum, a <strong>restock work order</strong> is posted on the Work Orders
+board for the reorder amount, with your reward, in your name, and announced in your industrial
+channel.</p>
+<ul>
+<li>Only <strong>one</strong> restock order per threshold is open at a time. When it is done or cancelled, a
+  new one is posted only if stock is still low.</li>
+<li>It checks every hour and straight after any withdrawal, so a big withdrawal is caught in
+  seconds. <strong>Run now</strong> checks a threshold immediately.</li>
+<li><strong>Last triggered</strong> links to the open order. Pausing a threshold never touches an order
+  already posted; deleting one leaves its orders on the board.</li>
+<li>A location-scoped threshold's order asks for delivery to that location, so the restock lands
+  where the threshold is looking.</li>
+</ul>
+<hr />
+<h2 id="crafting">Crafting<a class="headerlink" href="#crafting" title="Permanent link">&para;</a></h2>
+<p><em>Early access: shows up under Industrial for servers in the Industry v2 beta.</em></p>
+<p><strong>Crafting</strong> is where members ask the org for crafted items and find who can make them. Star
+Citizen has no crafting or blueprint API, so everything here is what members tell each other.</p>
+<p><strong>For members</strong></p>
+<ul>
+<li><strong>New request</strong> — name the item, or search for its <strong>blueprint</strong> (that fills in the name and
+  the category for you). Add a quantity, an optional minimum quality (1–1000), a date you need
+  it by, and tick <strong>I'll provide the materials</strong> if you will.</li>
+<li>From Discord: <strong><code>/craft request</code></strong> — pick a blueprint from the list in <code>item</code> (or just type
+  the item's name), the quantity, and optionally a minimum quality, a date (<code>2026-12-31</code>) and
+  notes. It lands on the same board.</li>
+<li><strong>My crafter profile</strong> — tick <strong>I craft for this org</strong> to join the <strong>Crafters</strong> roster. Pick the
+  blueprint categories you craft (they come from the game files), the best quality you can
+  reach, where your fabricator is, and a note about which blueprints you own. Untick <strong>Taking
+  new requests</strong> to pause without leaving the roster.</li>
+<li><strong>Claim</strong> — if your server allows it (on by default), you can take an open request yourself
+  when you are opted in, taking requests, your max quality is at least the request's minimum,
+  and you craft its category. The button tells you why when you can't.</li>
+<li>Once you hold a request: <strong>Start</strong>, then <strong>Mark ready</strong> (add the quality you reached), then
+  <strong>Mark delivered</strong>. <strong>Release</strong> hands it back to the board if you can't finish it.</li>
+<li><strong>Recipe</strong> shows the blueprint's ingredients from the game files, with "choose N of" where
+  the recipe lets you pick. The person who asked (or an officer) can press <strong>Work order</strong> next
+  to a material to open a work order already filled in — the amount is scaled to the quantity
+  and rounded up to whole SCU — check it and post it to gather the materials.</li>
+</ul>
+<p><strong>For officers</strong> (or ranks granted <strong>Industry Management</strong>)</p>
+<ul>
+<li><strong>Assign</strong> / <strong>Reassign</strong> any request. The dialog suggests the crafters who fit — the right
+  category and a high enough max quality, best first — or shows everyone.</li>
+<li>Move, release or cancel any request, and edit it at any stage.</li>
+<li><strong>Settings → Features → Crafters can claim requests themselves</strong> turns self-claim off, so only
+  officers assign.</li>
+</ul>
+<p>You get a notification when your request is taken, ready, delivered or put back on the board.</p>
 <hr />
 <h2 id="industry-hub-the-internal-market">Industry Hub &amp; the internal market<a class="headerlink" href="#industry-hub-the-internal-market" title="Permanent link">&para;</a></h2>
 <p>The Industry Hub is the module's landing surface, and it carries the <strong>Internal Org Market</strong>:
