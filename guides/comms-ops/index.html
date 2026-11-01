@@ -1193,14 +1193,17 @@ until you can try again.</p>
 <ul>
 <li><strong>Four tiles</strong> across the top:<ul>
 <li><strong>Operation</strong>: open, closed, or unknown (the shard has not said yet).</li>
-<li><strong>Connected</strong>: how many people are on comms.</li>
+<li><strong>Connected</strong>: how many people are on comms. Each person counts once, however many nets
+  they are on.</li>
 <li><strong>Nets</strong>: how many nets the shard reports.</li>
 <li><strong>Freshness</strong>: how current the page is (see below), with how long ago the data was updated.</li>
 </ul>
 </li>
-<li><strong>One card per net</strong> listing who is on it. A blue badge with a microphone means that person is
-  transmitting right now. People on no net, or on a net the shard no longer lists, appear under
-  <strong>Unassigned</strong>.</li>
+<li><strong>One card per net</strong> listing who is on it. Star Comms lets a person sit on several nets at
+  once, so they appear on the card of <strong>every</strong> net they are on. A blue badge with a microphone
+  means that person is transmitting right now. People on no net, or only on nets the shard no
+  longer lists, appear under <strong>Unassigned</strong>. If the shard's public net is switched on, it has a
+  card too.</li>
 <li><strong>The last ACARS message</strong> and who sent it.</li>
 </ul>
 <p>Names come from your Discord server: the member's server nickname, else their username. Someone
@@ -1247,7 +1250,9 @@ You'll only see it when the reconnect itself fails.</p>
 read-only.</p>
 <ul>
 <li><strong>Open operation / Close operation.</strong> Asks you to confirm first, because everyone on comms
-  sees it.</li>
+  sees it. While the operation state is unknown (the bot has not read it yet), the button says
+  <strong>Operation state unknown</strong> and does nothing, so you are never offered to open an operation
+  that may already be open. A <strong>Link error</strong> keeps the last operation state the bot saw.</li>
 <li><strong>Assign members.</strong> Opens a side panel:<ul>
 <li>Choose <strong>Assign</strong> or <strong>Unassign</strong>.</li>
 <li>Pick one or more members. People currently on comms are listed first, then your server's
