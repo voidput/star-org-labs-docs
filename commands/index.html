@@ -879,6 +879,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#your-voice-channel-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔊 Your voice channel (beta)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#goals-giving-back" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1047,6 +1058,17 @@
     <span class="md-ellipsis">
       
         🎧 Star Comms voice ops (beta)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-voice-channel-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔊 Your voice channel (beta)
       
     </span>
   </a>
@@ -1328,6 +1350,73 @@ live copy is unavailable, they ask the shard directly instead.</p>
 posts there when someone joins or leaves comms, and when the operation opens or closes. Each
 kind has its own switch. Push-to-talk is never announced.</p>
 </div>
+<hr />
+<h2 id="your-voice-channel-beta">🔊 Your voice channel (beta)<a class="headerlink" href="#your-voice-channel-beta" title="Permanent link">&para;</a></h2>
+<p><em>For the owner of a join-to-create channel, on servers in the voice control panel beta. Each
+command does what the matching panel button does, and every answer is private to you. See
+<a href="../guides/voice/">Voice Channels</a>.</em></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/voice rename &lt;name&gt;</code></td>
+<td>Rename your channel (Discord allows two renames every ten minutes).</td>
+</tr>
+<tr>
+<td><code>/voice limit &lt;0-99&gt;</code></td>
+<td>Set how many people can join; 0 means no limit.</td>
+</tr>
+<tr>
+<td><code>/voice lock</code> · <code>/voice hide</code> · <code>/voice chat-lock</code> <code>[state]</code></td>
+<td>Lock joining, hide the channel, or lock its text chat. Leave <code>state</code> empty to flip it.</td>
+</tr>
+<tr>
+<td><code>/voice status [text]</code></td>
+<td>Set the channel's status; leave it empty to clear it.</td>
+</tr>
+<tr>
+<td><code>/voice region &lt;region&gt;</code> · <code>/voice bitrate &lt;quality&gt;</code></td>
+<td>Pick the voice region or the audio quality.</td>
+</tr>
+<tr>
+<td><code>/voice soundboard [kind] [state]</code></td>
+<td>Turn the soundboard or external sounds on or off.</td>
+</tr>
+<tr>
+<td><code>/voice invite</code></td>
+<td>Get a one-hour invite that stops working when the channel closes.</td>
+</tr>
+<tr>
+<td><code>/voice reset</code> · <code>/voice delete</code></td>
+<td>Go back to the hub's settings, or delete the channel (both ask you to confirm).</td>
+</tr>
+<tr>
+<td><code>/voice user &lt;permit\|block\|kick\|trust\|transfer&gt; &lt;member&gt;</code></td>
+<td>Act on one member, like the panel's member buttons.</td>
+</tr>
+<tr>
+<td><code>/voice claim</code></td>
+<td>Take over the channel you're in once its owner has left.</td>
+</tr>
+<tr>
+<td><code>/voice defaults save [scope]</code></td>
+<td>Save this channel's setup for your next one, for this hub or everywhere.</td>
+</tr>
+<tr>
+<td><code>/voice waiting-room [state]</code></td>
+<td>Turn your channel's waiting room on or off; leave <code>state</code> empty to flip it.</td>
+</tr>
+<tr>
+<td><code>/voice knock &lt;owner&gt;</code></td>
+<td>Ask to join someone's locked channel; they get a card to let you in.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="goals-giving-back">🎯 Goals &amp; giving back<a class="headerlink" href="#goals-giving-back" title="Permanent link">&para;</a></h2>
 <table>

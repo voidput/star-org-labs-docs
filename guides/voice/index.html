@@ -965,9 +965,45 @@ everyone.</p>
 those as a permission on that channel, not across the server. One Discord quirk to know: a
 server mute or deafen stays on the member after they leave your channel, until a
 moderator lifts it. Unmute people before they head elsewhere.</p>
+<div class="admonition tip">
+<p class="admonition-title">Typing your controls: <code>/voice</code> (beta)</p>
+<p>On servers in the voice control panel beta, everything on your channel's control panel is
+also a slash command, and every answer is private to you:</p>
+<ul>
+<li><code>/voice rename</code>, <code>/voice limit</code>, <code>/voice status</code>, <code>/voice region</code>, <code>/voice bitrate</code></li>
+<li><code>/voice lock</code>, <code>/voice hide</code>, <code>/voice chat-lock</code>, <code>/voice soundboard</code>: pick <strong>On</strong> or
+  <strong>Off</strong>, or leave it empty to flip it</li>
+<li><code>/voice invite</code>, <code>/voice reset</code>, <code>/voice delete</code> (reset and delete ask you to confirm)</li>
+<li><code>/voice user permit</code>, <code>block</code>, <code>kick</code>, <code>trust</code> or <code>transfer</code> with a member</li>
+<li><code>/voice claim</code> takes over the channel you're in once its owner has left</li>
+<li><code>/voice defaults save</code> keeps your channel's setup for next time</li>
+<li><code>/voice waiting-room</code> turns your waiting room on or off (pick <strong>On</strong> or <strong>Off</strong>, or leave it empty to flip it)</li>
+</ul>
+<p>The commands work on the channel you're in, or on the one you own if you're not in voice.
+They follow the same rules as the panel buttons. If a server has turned a control off for a
+hub, the command is turned off too.</p>
+</div>
 <p>Leave the hub and come straight back and you're moved into the channel you still own. Once
 that channel is gone, a new one is ready after <strong>30 seconds</strong> — join-and-leave churn would
 otherwise make and delete a channel every time.</p>
+<div class="admonition tip">
+<p class="admonition-title">My Voice Channel on the website (beta)</p>
+<p>Where your org has turned on the new voice channel controls, <strong>My Voice Channel</strong> in the
+Personal section of the sidebar shows every channel you own right now, in any org, with the
+same controls as the panel in Discord: rename, user limit, lock, hide, lock the chat, status,
+region and audio quality, soundboard, an invite, permit, trust, block, kick, transfer, reset
+to the hub's defaults and delete. While you own a channel, your Member Homepage also shows a
+small card with Lock, Hide and Limit.</p>
+<p>The same rules apply as in Discord — two renames per ten minutes, nobody ranked above you
+can be kicked or blocked, and a control your org switched off isn't shown. Deleting from the
+website closes the channel within a few seconds. If the bot is missing a permission a
+control needs, the button is greyed out with the reason; if Discord refuses a control,
+wait a minute before trying it again (ask an admin to fix the bot's permissions).</p>
+<p>The page is also where you edit your <strong>saved defaults</strong>: settings for every org, plus
+optional tweaks for one hub ("my Squad channels use limit 5"). The hub's own rules always
+win, and a saved setting can only make a channel stricter, never looser. Your defaults are
+private — an org can't see them.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Setting them up</p>
 <p>Officers and admins configure hubs and their templates on the <strong>Voice Hubs</strong> page under
@@ -976,6 +1012,15 @@ the <em>Voice Hub Management</em> toggle). One template
 can back several hubs, so you describe the shape once — "Squad Channel" — and attach it
 to <code>➕ Create Squad</code> and <code>➕ Create Wing</code> alike, instead of maintaining two copies that
 slowly drift apart.</p>
+<p>Editing a hub also lets officers choose <strong>which control-panel buttons</strong> its channels show
+and which roles may press them (with an optional cap on the user limit owners can set), a
+<strong>fallback category</strong> for when the hub's category is full, the thread and transcript
+options below, and a <strong>permission check</strong> that lists anything the bot is missing, with a
+"Re-check now" button. Server admins can also pick a <strong>voice role</strong> that members hold
+while they're in one of the hub's channels.</p>
+<p>The same page lists every <strong>live channel</strong> — who owns it, how many are in it, and whether
+it's locked, hidden or has a waiting room. Server admins can <strong>force delete</strong> a channel in
+an emergency; that skips the transcript.</p>
 <p>Time spent in a hub channel does <strong>not</strong> count as event attendance. That's deliberate:
 hanging around in a party channel isn't the same as showing up for the op.</p>
 </div>
@@ -992,6 +1037,28 @@ saved either.</p>
 <p>Who can read a transcript: officers with Voice Hub Management, and — if the hub allows it —
 the channel's owner and anyone who was in the channel. Deleting your account removes your
 messages from every transcript.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Waiting room (beta, on servers using the new control panel)</p>
+<p>Want to vet who comes in? Press <strong>🚪 Waiting room</strong> on your channel's control panel. The
+bot opens a second voice channel next to yours, <code>⏳ Waiting · &lt;your channel&gt;</code>, where people
+can wait without being heard.</p>
+<ul>
+<li><strong>Someone joins the waiting room</strong> and a card pops up in your channel's chat: <strong>Let in</strong>
+  or <strong>Turn away</strong>. Let them in and the bot moves them across and lets them back in later
+  too; turn them away and they're dropped from the waiting room.</li>
+<li><strong>Can't see the waiting room?</strong> Lock your channel and others get an <strong>Ask to join</strong>
+  button on the panel, or they can type <code>/voice knock</code> and pick you. Your card shows up
+  the same way.</li>
+<li>People you <strong>trust</strong> or <strong>permitted</strong> skip the queue. People you've <strong>blocked</strong> can't
+  ask. Turned away? You can ask again in 10 minutes. A request nobody answers expires
+  after 5 minutes. Hopping in and out of the waiting room won't ping the owner again
+  for a minute.</li>
+<li>If your channel is <strong>hidden</strong>, so is its waiting room — only the people you trust or
+  permitted can see it, so its name never gives your channel away.</li>
+</ul>
+<p>You can also run the waiting room from the <strong>My voice channel</strong> page on the web. Press
+the button again to close it; anyone still waiting is disconnected.</p>
 </div>
 <hr />
 <h2 id="event-voice-channels">Event voice channels<a class="headerlink" href="#event-voice-channels" title="Permanent link">&para;</a></h2>
