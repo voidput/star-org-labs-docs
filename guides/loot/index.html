@@ -1311,7 +1311,7 @@ with a free-for-all on the ore.</p>
 <td><strong>Even Split</strong></td>
 <td>anyone who can afford it</td>
 <td>your bid divided across the stack</td>
-<td>the same divided amount</td>
+<td>the same divided amount; any remainder on your first win</td>
 </tr>
 <tr>
 <td><strong>Take All</strong></td>
@@ -1323,7 +1323,9 @@ with a free-for-all on the ore.</p>
 </table>
 <p><strong>Diminishing</strong> is the default, and the safe one: you can win the same item twice, your odds
 drop each time so the stack spreads around, and repeat wins don't cost you anything.</p>
-<p><strong>Even Split</strong> treats a bid of 100 on a stack of 4 exactly like bidding 25 four times over.</p>
+<p><strong>Even Split</strong> treats a bid of 100 on a stack of 4 exactly like bidding 25 four times over.
+When the bid doesn't divide evenly, the leftover is charged on your first win, so a bid of 10
+on a stack of 3 costs 4, then 3, then 3: never more or less than you bid in total.</p>
 <p><strong>Take All</strong> is for the thing that only makes sense whole — one roll takes the entire stack.</p>
 <div class="admonition tip">
 <p class="admonition-title">The free-roll rule nobody expects</p>
@@ -1331,7 +1333,7 @@ drop each time so the stack spreads around, and repeat wins don't cost you anyth
 pays.</strong> When the number of distinct bidders is at or below the remaining quantity,
 everyone wins for free. Five bidders on a stack of five all walk away with one and
 spend nothing.</p>
-<p>Take All has its own version: free only when you were the <em>only</em> eligible bidder.</p>
+<p>Take All has no free roll: the winner always pays their bid, even if nobody else bid.</p>
 </div>
 <h3 id="items-nobody-bid-on">Items nobody bid on<a class="headerlink" href="#items-nobody-bid-on" title="Permanent link">&para;</a></h3>
 <p>A session-level switch decides what happens to an item with no eligible bids. <strong>Off</strong>
