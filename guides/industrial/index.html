@@ -794,6 +794,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Crafting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My blueprints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1095,6 +1112,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Crafting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My blueprints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1309,11 +1343,13 @@ Citizen has no crafting or blueprint API, so everything here is what members tel
   notes. It lands on the same board.</li>
 <li><strong>My crafter profile</strong> — tick <strong>I craft for this org</strong> to join the <strong>Crafters</strong> roster. Pick the
   blueprint categories you craft (they come from the game files), the best quality you can
-  reach, where your fabricator is, and a note about which blueprints you own. Untick <strong>Taking
-  new requests</strong> to pause without leaving the roster.</li>
+  reach and where your fabricator is. Untick <strong>Taking new requests</strong> to pause without leaving
+  the roster. (If you wrote a "blueprints I own" note before, it is still shown there,
+  read-only — <strong>My blueprints</strong> below replaces it.)</li>
 <li><strong>Claim</strong> — if your server allows it (on by default), you can take an open request yourself
   when you are opted in, taking requests, your max quality is at least the request's minimum,
-  and you craft its category. The button tells you why when you can't.</li>
+  and you craft its category — or you <strong>own its blueprint</strong>. The button tells you why when you
+  can't.</li>
 <li>Once you hold a request: <strong>Start</strong>, then <strong>Mark ready</strong> (add the quality you reached), then
   <strong>Mark delivered</strong>. <strong>Release</strong> hands it back to the board if you can't finish it.</li>
 <li><strong>Recipe</strong> shows the blueprint's ingredients from the game files, with "choose N of" where
@@ -1329,7 +1365,28 @@ Citizen has no crafting or blueprint API, so everything here is what members tel
 <li><strong>Settings → Features → Crafters can claim requests themselves</strong> turns self-claim off, so only
   officers assign.</li>
 </ul>
-<p>You get a notification when your request is taken, ready, delivered or put back on the board.</p>
+<p>You get a notification when your request is taken, ready, delivered or put back on the board.
+If you own the blueprint someone asks for, you get one when they ask.</p>
+<h3 id="my-blueprints">My blueprints<a class="headerlink" href="#my-blueprints" title="Permanent link">&para;</a></h3>
+<p><strong>Crafting → My blueprints</strong> is the list of blueprints your account owns — one list for every
+org you're in. An org sees it only while you're opted in as a crafter there.</p>
+<ul>
+<li><strong>Import from logs</strong> — pick your <code>Game.log</code> and any files from the <code>logbackups</code> folder
+  (in your Star Citizen folder, e.g. <code>StarCitizen\LIVE\</code>), or a <code>.zip</code> of them, all at once.
+  You can drag them onto the box. <strong>Your logs are read on your computer and never uploaded</strong>:
+  only the blueprints you save are sent.</li>
+<li>Using a localization mod such as <strong>StarStrings</strong>? Add its <code>global.ini</code>
+  (<code>data\Localization\…\global.ini</code>) with the logs, so renamed items still match.</li>
+<li><strong>Review</strong> shows what's new, what's already on your list, names that fit more than one
+  blueprint (pick the right one, or leave it), names that didn't match, and what each file
+  found. Press <strong>Save</strong> to add the new ones.</li>
+<li><strong>Starter blueprints aren't in your logs</strong> — the game only logs blueprints you receive. Switch
+  to <strong>All blueprints</strong>, search or open a category (each has <strong>Select all</strong>), tick what you
+  own and <strong>Save list</strong> as <em>Starter</em>. Use <em>Manual fix</em> for anything else, and untick to remove.</li>
+</ul>
+<p><strong>Blueprint library</strong> (Crafting → Blueprint library) shows what your org can craft and who
+owns each blueprint — only members who opted in as crafters are listed. Officers assigning a
+request see the crafters who own its blueprint first.</p>
 <hr />
 <h2 id="industry-hub-the-internal-market">Industry Hub &amp; the internal market<a class="headerlink" href="#industry-hub-the-internal-market" title="Permanent link">&para;</a></h2>
 <p>The Industry Hub is the module's landing surface, and it carries the <strong>Internal Org Market</strong>:
