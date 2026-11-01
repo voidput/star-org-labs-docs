@@ -1149,7 +1149,23 @@ change tries again.</p>
 requests, but not your shard's existing nets; a copy into a server without Star Comms falls
 back to Discord.</p>
 <h2 id="linking-the-shard-server-admins">Linking the shard (server admins)<a class="headerlink" href="#linking-the-shard-server-admins" title="Permanent link">&para;</a></h2>
-<p>In <strong>Server Settings → External → Star Comms Shard</strong>:</p>
+<p><strong>First time? Use the setup wizard.</strong> While nothing is linked, the Star Comms card shows <strong>Start
+setup wizard</strong>, and the Comms Ops page shows <strong>Connect Star Comms</strong> to server admins. The wizard
+takes five steps:</p>
+<ol>
+<li><strong>Get a key</strong>: where to create the Owner API key, and the scopes to tick, each with a copy
+   button.</li>
+<li><strong>Shard address</strong>: the same forgiving address field as the card (below).</li>
+<li><strong>Key &amp; check</strong>: paste the key. <strong>Save &amp; check</strong> saves the address and key (Star Comms stays
+   off), then runs Test Connection and Verify permissions and shows the result for each scope. If
+   the check fails you can fix it and <strong>Try again</strong>, or <strong>Continue anyway</strong>.</li>
+<li><strong>Announcements</strong>: the notification channel and the two announce switches.</li>
+<li><strong>Review &amp; enable</strong>: everything you chose, with <strong>Edit</strong> to jump back to a step. <strong>Enable</strong>
+   starts on only if the check passed.</li>
+</ol>
+<p>Closing the wizard keeps a draft of your answers for next time, except the API key, which is never
+stored in your browser. <strong>Use the full form</strong> switches to the card below.</p>
+<p>Or fill in <strong>Server Settings → External → Star Comms Shard</strong> directly:</p>
 <ol>
 <li><strong>Shard URL.</strong> Hosted shards live at <code>https://s-&lt;your-org&gt;.star-comms.org</code> — note the <code>s-</code>.
    The same address without <code>s-</code> is the Star Comms website, not your shard; if you enter it, the
@@ -1168,8 +1184,10 @@ back to Discord.</p>
    none of them — or the shard is refusing this server's IP address. When the shard reports its
    plan limits (how many nets, whether ACARS is on), they are shown under the list.</li>
 </ol>
-<p>Both checks are limited to a few a minute; if you hit the limit the buttons wait until you can try
-again.</p>
+<p>Both checks test the <strong>saved</strong> settings. While the card has unsaved changes the buttons are off and
+the card says to save first. <strong>Enable</strong> stays off until there is a shard URL and an API key.</p>
+<p>Both checks are limited to a few a minute; if you hit the limit the buttons wait, with a countdown,
+until you can try again.</p>
 <hr />
 <h2 id="what-you-see">What you see<a class="headerlink" href="#what-you-see" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1217,7 +1235,7 @@ shard straight away; the page shows them on its next refresh.</p>
 </tr>
 <tr>
 <td><strong>Not set up</strong></td>
-<td>The server has no working Star Comms link. A server admin sets it up in Server Settings → External.</td>
+<td>The server has no working Star Comms link. A server admin sets it up in Server Settings → External, or with <strong>Connect Star Comms</strong> on this page.</td>
 </tr>
 </tbody>
 </table>
