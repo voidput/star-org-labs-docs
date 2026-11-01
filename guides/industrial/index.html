@@ -1375,7 +1375,7 @@ If you own the blueprint someone asks for, you get one when they ask.</p>
 <p><strong>Crafting → My blueprints</strong> is the list of blueprints your account owns — one list for every
 org you're in. An org sees it only while you're opted in as a crafter there.</p>
 <ul>
-<li><strong>Import from logs</strong> — pick your <code>Game.log</code> and any files from the <code>logbackups</code> folder
+<li><strong>Import blueprints → Game logs</strong> — pick your <code>Game.log</code> and any files from the <code>logbackups</code> folder
   (in your Star Citizen folder, e.g. <code>StarCitizen\LIVE\</code>), or a <code>.zip</code> of them, all at once.
   You can drag them onto the box. <strong>Your logs are read on your computer and never uploaded</strong>:
   only the blueprints you save are sent.</li>
@@ -1384,6 +1384,19 @@ org you're in. An org sees it only while you're opted in as a crafter there.</p>
 <li><strong>Review</strong> shows what's new, what's already on your list, names that fit more than one
   blueprint (pick the right one, or leave it), names that didn't match, and what each file
   found. Press <strong>Save</strong> to add the new ones.</li>
+<li><strong>Already track them on Dumper's Repo?</strong> Choose <strong>Import blueprints → Dumper's Repo</strong> and
+  paste your list (or upload it as a <code>.json</code> / <code>.txt</code> file):</li>
+<li><em>Signed in:</em> on Dumper's Repo open DevTools (F12) → <strong>Network</strong>, reload the Blueprints page,
+    filter for <code>acquired_blueprints</code>, right-click the request → <strong>Copy response</strong>, and paste it.</li>
+<li><em>Guest:</em> in the DevTools console run <code>copy(localStorage.acquired_blueprints)</code> and paste the
+    result.</li>
+<li>A saved Dumper's Repo page (<code>.html</code>) also works, but it only holds the blueprints that were
+    on screen — the dialog tells you how many it found out of your total.</li>
+<li>You never need your Dumper's Repo password or API key for this.</li>
+<li><strong>Track them on SCMDB?</strong> On scmdb.net open the tracking page → <strong>Export</strong>, then choose
+  <strong>Import blueprints → SCMDB</strong> and upload the <code>scmdb-tracking-*.json</code> file. Blueprints you
+  marked completed are imported; SCMDB's default blueprints are saved as <em>Starter</em>.</li>
+<li>Tracker exports are read in your browser too — only the matched blueprints are sent.</li>
 <li><strong>Starter blueprints aren't in your logs</strong> — the game only logs blueprints you receive. Switch
   to <strong>All blueprints</strong>, search or open a category (each has <strong>Select all</strong>), tick what you
   own and <strong>Save list</strong> as <em>Starter</em>. Use <em>Manual fix</em> for anything else, and untick to remove.</li>
