@@ -1212,6 +1212,9 @@ copy the bot keeps from the shard's live event stream. So when someone joins a n
 channel or keys their mic, expect the page to catch up <strong>within about 10 seconds</strong>. That delay is
 normal, not a fault. Your own changes (an assignment, opening the operation) are sent to the
 shard straight away; the page shows them on its next refresh.</p>
+<p>Some shards close the bot's live connection about once a minute. The bot reconnects within a
+second or two and the page keeps showing the last data, so you won't see <strong>Link error</strong> for that.
+You'll only see it when the reconnect itself fails.</p>
 <p>The <strong>Freshness</strong> tile tells you how far to trust what you see:</p>
 <table>
 <thead>
@@ -1292,6 +1295,12 @@ bot.</p>
 <li>Only your own server's roles can be used. A rule whose net no longer exists is marked, and must
   be changed or removed before you can save.</li>
 <li><strong>Discard changes</strong> puts the list back to what the shard has.</li>
+<li>After a save, Star Org reads the list back from the shard. If the shard didn't keep what was
+  sent, the save fails with a message saying how many rules it holds now, instead of reporting
+  success. Some shards currently accept the save but keep nothing. Until that's resolved, set
+  rules in the Star Comms app.</li>
+<li>Rules live on the shard and are not tied to an event or operation in Star Org. They stay until
+  someone saves a different list.</li>
 </ul>
 
 
