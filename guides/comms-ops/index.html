@@ -1290,20 +1290,24 @@ bot.</p>
 </ul>
 <p>In Discord, <code>/comms preset list</code> shows the presets and <code>/comms preset apply &lt;name&gt;</code> applies one.</p>
 <h3 id="role-rules">Role rules<a class="headerlink" href="#role-rules" title="Permanent link">&para;</a></h3>
-<p>A rule gives a Discord role a net: the shard puts everyone holding that role on it.</p>
+<p>A rule gives a Discord role one or more nets: the shard puts everyone holding that role on them.
+These are the shard's own auto-assignment rules. They are <strong>not</strong> the Groups you see in the Star
+Comms app (Groups and their role auto-assign are a separate Star Comms feature that Star Org does
+not change), and the Star Comms app does not show these rules.</p>
 <ul>
-<li>Each row is a <strong>Discord role</strong> and a <strong>Net</strong>. <strong>Add rule</strong> adds a row; the bin icon removes one.
-  A role can have only one rule.</li>
+<li>Each row is a <strong>Discord role</strong> and its <strong>Nets</strong> (pick one or more). <strong>Add rule</strong> adds a row; the
+  bin icon removes one. A role can have only one rule.</li>
 <li><strong>Save rules replaces the whole list on the shard.</strong> It does not add to it: any rule you removed
   from the page is deleted, and the confirmation says how many. Saving an empty list deletes every
   rule.</li>
-<li>Only your own server's roles can be used. A rule whose net no longer exists is marked, and must
-  be changed or removed before you can save.</li>
+<li>Only your own server's roles can be used. A net that no longer exists is marked on its rule, and
+  must be removed before you can save.</li>
 <li><strong>Discard changes</strong> puts the list back to what the shard has.</li>
 <li>After a save, Star Org reads the list back from the shard. If the shard didn't keep what was
   sent, the save fails with a message saying how many rules it holds now, instead of reporting
-  success. Some shards currently accept the save but keep nothing. Until that's resolved, set
-  rules in the Star Comms app.</li>
+  success.</li>
+<li><strong>To check a save worked:</strong> refresh the page and open <strong>Rules</strong> again. The rule should still be
+  there with the same nets.</li>
 <li>Rules live on the shard and are not tied to an event or operation in Star Org. They stay until
   someone saves a different list.</li>
 </ul>
