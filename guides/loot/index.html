@@ -1255,8 +1255,13 @@ posts nowhere.</p>
 <p><strong>Did the announcement post?</strong> The hub list and the hub's <strong>Hub Settings</strong> card show the
 state of the <strong>Loot Session Started</strong> post: <strong>Posting…</strong> while it is on its way, <strong>Posted</strong>
 (with <strong>Open in Discord</strong>) once it is up, or <strong>Failed</strong> (<strong>Post failed</strong> in the list) with the
-reason, for example a missing bot permission or a deleted channel. Fix the cause, then press
-<strong>Repost</strong> in Hub Settings to try again. A hub with no text channel shows nothing.</p>
+reason, for example a missing bot permission or a deleted channel. A post that has said
+<strong>Posting…</strong> for more than about 10 minutes reads <strong>Not posted</strong>: it got lost on the way.
+A failed or lost post shows its reason under the hub in the list and at the top of the hub
+page, with a <strong>Repost</strong> button for the hub's admins. Fix the cause, then press <strong>Repost</strong> to
+try again. This also covers hubs made with <code>/loot create</code> and hubs an event creates when it
+launches. A hub with no text channel asks you to pick one in Hub Settings instead. A hub that
+has nothing to post shows nothing.</p>
 <h3 id="payout-method">Payout method<a class="headerlink" href="#payout-method" title="Permanent link">&para;</a></h3>
 <p>New hubs start on <strong>Items only (no aUEC tracked)</strong>: the hub records who won what and
 leaves the money out. Pick <strong>Track aUEC value per item</strong> to price each win at the item's
