@@ -725,6 +725,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-rules-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rules tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#role-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1060,6 +1071,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-rules-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rules tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#role-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1289,11 +1311,30 @@ bot.</p>
 <li><strong>Delete</strong> removes the preset from the shard. Nobody is moved.</li>
 </ul>
 <p>In Discord, <code>/comms preset list</code> shows the presets and <code>/comms preset apply &lt;name&gt;</code> applies one.</p>
+<h3 id="the-rules-tab">The Rules tab<a class="headerlink" href="#the-rules-tab" title="Permanent link">&para;</a></h3>
+<p>Star Comms has two ways to put people on nets automatically, and the Rules tab shows both:</p>
+<ul>
+<li>
+<p><strong>By net</strong>, at the top, sums both up one net at a time: each net lists the Discord roles that
+  land on it, from Groups and from saved role rules together, and how many members groups put
+  there by name. A net nobody is put on says so. On a computer, hover a role to see which group or
+  rule puts it there. It shows what is saved, so unsaved edits to the role rules below don't
+  appear until you save.</p>
+</li>
+<li>
+<p><strong>Star Comms Groups</strong>, at the top, are the groups you set up in the Star Comms app. The tab
+  lists every group that has <strong>auto-assign</strong> turned on and at least one net, with its Discord
+  roles, how many members it lists by name, and its nets. This list is <strong>read only</strong>: edit groups
+  in the Star Comms admin menu. If the shard can't list its groups (an older shard, or an API key
+  that isn't allowed to), the section says so and the role rules below still work.</p>
+</li>
+<li><strong>Role rules</strong>, below, are set through the Star Comms API, and you edit them here. The Star
+  Comms app does not show them.</li>
+</ul>
+<p>Neither is better: role rules suit an org that already manages Discord roles, and Groups can be
+changed by anyone with the Star Comms admin menu.</p>
 <h3 id="role-rules">Role rules<a class="headerlink" href="#role-rules" title="Permanent link">&para;</a></h3>
-<p>A rule gives a Discord role one or more nets: the shard puts everyone holding that role on them.
-These are the shard's own auto-assignment rules. They are <strong>not</strong> the Groups you see in the Star
-Comms app (Groups and their role auto-assign are a separate Star Comms feature that Star Org does
-not change), and the Star Comms app does not show these rules.</p>
+<p>A rule gives a Discord role one or more nets: the shard puts everyone holding that role on them.</p>
 <ul>
 <li>Each row is a <strong>Discord role</strong> and its <strong>Nets</strong> (pick one or more). <strong>Add rule</strong> adds a row; the
   bin icon removes one. A role can have only one rule.</li>
@@ -1303,6 +1344,9 @@ not change), and the Star Comms app does not show these rules.</p>
 <li>Only your own server's roles can be used. A net that no longer exists is marked on its rule, and
   must be removed before you can save.</li>
 <li><strong>Discard changes</strong> puts the list back to what the shard has.</li>
+<li><strong>If someone else changed the rules while you were editing</strong> (another officer, or a tool using
+  the Star Comms API), the save is refused and nothing is changed. The page reloads the shard's
+  list and says why above it. Make your change again on the new list.</li>
 <li>After a save, Star Org reads the list back from the shard. If the shard didn't keep what was
   sent, the save fails with a message saying how many rules it holds now, instead of reporting
   success.</li>
