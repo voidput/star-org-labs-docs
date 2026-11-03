@@ -714,6 +714,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#presets" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1060,6 +1071,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#presets" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1294,9 +1316,21 @@ read-only.</p>
 <p>If the shard refuses an action (a rejected key, a missing permission on the key, a rate limit),
 the panel shows the reason. Nothing is retried automatically, so an action is never sent twice.</p>
 <h2 id="presets-and-role-rules-officers">Presets and role rules (officers)<a class="headerlink" href="#presets-and-role-rules-officers" title="Permanent link">&para;</a></h2>
-<p>Officers see three tabs at the top of the page: <strong>Live</strong> (everything above), <strong>Presets</strong> and
-<strong>Rules</strong>. Members only see the live view. Presets and rules are stored on your shard, not by the
-bot.</p>
+<p>Officers see four tabs at the top of the page: <strong>Live</strong> (everything above), <strong>Presets</strong>,
+<strong>Rules</strong> and <strong>Structure</strong>. Members only see the live view. Presets and rules are stored on your
+shard, not by the bot; the structure is kept by Star Org.</p>
+<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
+<p><strong>Structure</strong> sets how your nets fit together, the way you'd draw your comms plan: for each net,
+which net it <strong>reports to</strong> and its <strong>type</strong> (Command &amp; control, Peer-to-peer or Support). The
+diagram under the list previews it, and Fleet Command's <strong>Comms map</strong> draws it for every op, with
+each team's Discord call hanging off its team's net.</p>
+<ul>
+<li>A net can't report to itself or to a net below it, so those aren't offered.</li>
+<li><strong>Save structure</strong> replaces the whole structure. <strong>Discard changes</strong> puts it back.</li>
+<li>Star Comms has no setting for this, so it's kept in Star Org and saving changes nothing on the
+  shard. If you delete a net in Star Comms, it drops out of the structure; nets under it move to
+  the top level.</li>
+</ul>
 <h3 id="presets">Presets<a class="headerlink" href="#presets" title="Permanent link">&para;</a></h3>
 <p>A preset is a saved layout: who sits on which net, and whether the operation is open.</p>
 <ul>
