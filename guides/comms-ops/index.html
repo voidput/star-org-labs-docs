@@ -666,6 +666,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Linking the shard (server admins)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-link-launch-star-comms-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch link (Launch Star Comms button)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1023,6 +1040,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Linking the shard (server admins)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-link-launch-star-comms-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch link (Launch Star Comms button)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1232,6 +1266,26 @@ stored in your browser. <strong>Use the full form</strong> switches to the card 
 the card says to save first. <strong>Enable</strong> stays off until there is a shard URL and an API key.</p>
 <p>Both checks are limited to a few a minute; if you hit the limit the buttons wait, with a countdown,
 until you can try again.</p>
+<h3 id="launch-link-launch-star-comms-button">Launch link (Launch Star Comms button)<a class="headerlink" href="#launch-link-launch-star-comms-button" title="Permanent link">&para;</a></h3>
+<p>Once Star Comms is on, the card's <strong>Launch link</strong> section can create a link that opens the Star
+Comms desktop app on your shard. Give it a name if you like (it shows in your shard's list of
+launch links) and press <strong>Create launch link</strong>. The key needs the <code>write:uri</code> scope; add
+<code>manage:uri</code> too so Star Org can revoke old links.</p>
+<p>Members then get a <strong>Launch Star Comms</strong> button:</p>
+<ul>
+<li>at the top of the <strong>Comms Ops</strong> page,</li>
+<li>on the event's <strong>Comms map</strong>,</li>
+<li>on your event posts for Star Comms ops, next to <strong>Get Star Comms</strong>,</li>
+<li>under the <code>/comms status</code> reply (only the member who asked sees it).</li>
+</ul>
+<p>If the app isn't installed, the button opens Star Comms' install help instead. <strong>The link is not a
+login:</strong> members still sign in and pass your shard's normal Discord checks. It is only shown in
+your own server. Copies of your event posts in allied servers don't carry it.</p>
+<p><strong>Regenerate</strong> makes a new link and revokes the old one, so copies of the old link stop working.
+<strong>Remove</strong> revokes the link and takes the buttons away. If the shard won't revoke the old link
+(usually because the key has no <code>manage:uri</code>), the card says so; revoke it in the Star Comms admin
+panel. Moving the card to a different shard address drops the link, because it only works on the
+shard it was made for.</p>
 <hr />
 <h2 id="what-you-see">What you see<a class="headerlink" href="#what-you-see" title="Permanent link">&para;</a></h2>
 <ul>
