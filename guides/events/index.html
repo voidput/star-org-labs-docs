@@ -579,6 +579,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#objective-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective checklists
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1071,6 +1082,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#objective-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective checklists
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1306,6 +1328,30 @@ Comms-only op only nets.</p>
   read who is in voice, the calls fall back to the plan and say so.</li>
 </ul>
 <hr />
+<h3 id="objective-checklists">Objective checklists<a class="headerlink" href="#objective-checklists" title="Permanent link">&para;</a></h3>
+<p>Some ops need teams to work in order: Alpha collects keycards, Bravo pulls batteries,
+and only then can Charlie act. An <strong>objective checklist</strong> keeps that plan in one place
+instead of in a leader's head.</p>
+<ul>
+<li><strong>Write it once, on a template.</strong> In the template editor's <strong>Objectives</strong> section,
+  add objectives, give each a team (by name), an optional count ("4 batteries") and the
+  objectives it waits on. Every op made from the template gets its own copy. If an op has
+  no team with that name, the objective is left for anyone and the wizard tells you.</li>
+<li><strong>Share it as JSON.</strong> <strong>Export JSON</strong> downloads the checklist; <strong>Import JSON</strong> loads one
+  (replace or append). There are no built-in checklists — what you write is yours.</li>
+<li><strong>Run it.</strong> The checklist sits above the roster on the event, for everyone who can see
+  the op. Members claim, count and complete their own team's objectives (or anyone's
+  unassigned ones) from the web, or from the checklist message in the event's Discord
+  thread. Leaders can add, edit, reorder and import at any time.</li>
+<li><strong>🔒 means waiting.</strong> A locked objective can't be started until everything it depends on
+  is done. The moment the last one finishes, the team is pinged in the thread. On a Star
+  Comms op a leader can also turn on <strong>ACARS on unlock</strong> — note that ACARS goes to the
+  whole shard, so everyone on it sees the objective's title, and it shares your org's one
+  ACARS per minute.</li>
+<li><strong>Afterwards.</strong> Once the op ends, members can't change it. Leaders can still correct it
+  until the after-action report leaves draft, and the report shows when each objective
+  was finished and by whom.</li>
+</ul>
 <h2 id="4-close-it-out">4. Close it out<a class="headerlink" href="#4-close-it-out" title="Permanent link">&para;</a></h2>
 <p><strong>Attendance is automatic.</strong> At each lifecycle step — and whenever you regather — the bot
 scans the event's voice channels and records who was actually there. That includes
