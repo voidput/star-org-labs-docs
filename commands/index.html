@@ -1476,7 +1476,7 @@ command does what the matching panel button does, and every answer is private to
 <hr />
 <h2 id="running-ops-officers"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 4a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5.13 12A9.7 9.7 0 0 1 12 20.92 9.7 9.7 0 0 1 6.87 17c-.34-.5-.63-1-.87-1.53 0-1.65 2.71-3 6-3s6 1.32 6 3c-.24.53-.53 1.03-.87 1.53"/></svg></span> Running ops (Officers)<a class="headerlink" href="#running-ops-officers" title="Permanent link">&para;</a></h2>
 <p>Organize events, templates, recurring runs, and loot.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Events</label><label for="__tabbed_1_2">Recurring events</label><label for="__tabbed_1_3">Loot Hub</label><label for="__tabbed_1_4">Sponsorship</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Events</label><label for="__tabbed_1_2">Recurring events</label><label for="__tabbed_1_3">Loot Hub</label><label for="__tabbed_1_4">Threat Intel</label><label for="__tabbed_1_5">Sponsorship</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -1602,6 +1602,27 @@ command does what the matching panel button does, and every answer is private to
 <tr>
 <td><code>/goal create_custom &lt;name&gt; &lt;reward&gt; &lt;reqs&gt; &lt;qty&gt;</code></td>
 <td>Create a fully custom org goal.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>Only when Threat Intel is turned on for your server.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/kos add &lt;target&gt; &lt;level&gt; &lt;reason&gt; [confirm] [kind]</code></td>
+<td>Put a pilot or an org on your server's threat list, or change the level you already gave them. <code>kind</code> is <code>pilot</code> (the default; <code>target</code> is an RSI handle) or <code>org</code> (<code>target</code> is the org's SID). Running it again for the same target updates your verdict in place, and the reply tells you if another verdict keeps the headline worse.</td>
+</tr>
+<tr>
+<td><code>/kos remove &lt;target&gt;</code></td>
+<td>Take a pilot or org off your server's threat list.</td>
 </tr>
 </tbody>
 </table>
