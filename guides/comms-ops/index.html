@@ -1267,10 +1267,21 @@ the card says to save first. <strong>Enable</strong> stays off until there is a 
 <p>Both checks are limited to a few a minute; if you hit the limit the buttons wait, with a countdown,
 until you can try again.</p>
 <h3 id="launch-link-launch-star-comms-button">Launch link (Launch Star Comms button)<a class="headerlink" href="#launch-link-launch-star-comms-button" title="Permanent link">&para;</a></h3>
-<p>Once Star Comms is on, the card's <strong>Launch link</strong> section can create a link that opens the Star
-Comms desktop app on your shard. Give it a name if you like (it shows in your shard's list of
-launch links) and press <strong>Create launch link</strong>. The key needs the <code>write:uri</code> scope; add
-<code>manage:uri</code> too so Star Org can revoke old links.</p>
+<p>The card's <strong>Launch link</strong> section decides where the <strong>Launch Star Comms</strong> button comes from. Pick
+one of three modes:</p>
+<ul>
+<li><strong>Auto</strong> (the default): Star Org makes the link that opens the Star Comms desktop app on your
+  shard for you, when you save Star Comms on or finish the connect wizard, or the next time an
+  admin opens the card. The key needs the <code>write:uri</code> scope; add <code>manage:uri</code> too so Star Org can
+  revoke old links. If Star Org can't make the link (the shard has no launch links, or the key is
+  missing <code>write:uri</code>), the card shows why. Your save still goes through. Star Org tries again on
+  its own after an hour, or you can press <strong>Create launch link</strong> to try now. You can name the link
+  when you create it by hand; it shows in your shard's list of launch links.</li>
+<li><strong>Off</strong>: no Launch Star Comms button anywhere. A link Star Org already made is kept, not
+  revoked, so switching back to <strong>Auto</strong> reuses it.</li>
+<li><strong>Custom URL</strong>: members get a link you supply. It must start with <code>https://</code>, can't contain a
+  user name or password, and can be at most 512 characters. Press <strong>Save URL</strong> to use it.</li>
+</ul>
 <p>Members then get a <strong>Launch Star Comms</strong> button:</p>
 <ul>
 <li>at the top of the <strong>Comms Ops</strong> page,</li>
@@ -1282,7 +1293,8 @@ launch links) and press <strong>Create launch link</strong>. The key needs the <
 login:</strong> members still sign in and pass your shard's normal Discord checks. It is only shown in
 your own server. Copies of your event posts in allied servers don't carry it.</p>
 <p><strong>Regenerate</strong> makes a new link and revokes the old one, so copies of the old link stop working.
-<strong>Remove</strong> revokes the link and takes the buttons away. If the shard won't revoke the old link
+<strong>Remove</strong> revokes the link, takes the buttons away and switches the mode to <strong>Off</strong>, so Star Org
+doesn't make a new one. If the shard won't revoke the old link
 (usually because the key has no <code>manage:uri</code>), the card says so; revoke it in the Star Comms admin
 panel. Moving the card to a different shard address drops the link, because it only works on the
 shard it was made for.</p>
