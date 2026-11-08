@@ -1165,7 +1165,7 @@ happens.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>/loot create &lt;name&gt; [event] [points] [sync_vc] [admin_only]</code></td>
+<td><code>/loot create &lt;name&gt; [event_id] [points] [sync_vc] [admin_only]</code></td>
 <td>Open a session. <code>points</code> defaults to <strong>100</strong>; <code>sync_vc</code> adds everyone in your current voice channel; <code>admin_only</code> runs it without a seat for you</td>
 </tr>
 <tr>
@@ -1173,7 +1173,7 @@ happens.</p>
 <td>Run the weighted roll</td>
 </tr>
 <tr>
-<td><code>/loot next_round &lt;session&gt; [points]</code></td>
+<td><code>/loot next_round &lt;session&gt; [increment]</code></td>
 <td>Next round, and top everyone up</td>
 </tr>
 </tbody>
@@ -1272,7 +1272,7 @@ default changed keep the method they had.</p>
 <h2 id="bidding">Bidding<a class="headerlink" href="#bidding" title="Permanent link">&para;</a></h2>
 <p>Each participant has a <strong>point balance</strong> for the session. You bid points on the items you
 want; higher bids mean better odds, not guaranteed wins.</p>
-<p>Two rules cut across every mode:</p>
+<p>Three rules cut across every mode:</p>
 <ul>
 <li><strong>A zero bid never rolls.</strong> Bid nothing, win nothing.</li>
 <li><strong>One bid per item.</strong> Each item takes a single bid from you; to bid more, raise that bid.</li>
@@ -1353,11 +1353,11 @@ The on-time award pays each member once per session. In a guild-points session o
 manager (an officer, an admin, or a rank granted loot management) can give the voice or
 on-time award, because it adds to members' guild points. A host without that right still
 runs everything else in the hub. A voice award can be given more than once in a long op.
-<strong>Send Unassigned to Org</strong>, which moves items nobody won into the org inventory, is for loot
+<strong>Send Unassigned to Org</strong>, which moves items nobody won into the Org Vault, is for loot
 managers too.</p>
 <p>Once anything in a hub has been won, <strong>end the hub instead of deleting it.</strong> A hub, an item
 or a participant with a win can't be deleted, kicked or wiped, so nobody loses a win they
-paid for. Items that came from the org inventory go back there when you delete them
+paid for. Items that came from the Org Vault go back there when you delete them
 unwon.</p>
 <p>Guests cannot join a guild-points session: a bid spends your org's ledger, so you need to sign
 in as a member of the org. A seat with no guild-points balance in the org never wins an item,
@@ -1369,7 +1369,8 @@ by bid or by the unbidded hand-out.</p>
 Idris", settling a tie.</p>
 <ul>
 <li><strong>Spin to Win</strong> — one spin, one winner.</li>
-<li><strong>Elimination</strong> — spin repeatedly, knocking names out until one is left.</li>
+<li><strong>Elimination</strong> — shown on the result, but for now it also picks one winner in a single
+  spin.</li>
 </ul>
 <hr />
 <p><strong>Next:</strong> <a href="../events/">Events &amp; Ops</a> · <a href="../org-command/">Org Command</a></p>

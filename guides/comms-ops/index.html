@@ -719,6 +719,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ready-check-officers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready Check (officers)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#presets-and-role-rules-officers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1093,6 +1104,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ready-check-officers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready Check (officers)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#presets-and-role-rules-officers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1174,7 +1196,8 @@
 <p>The <strong>Comms Ops</strong> page shows your org's Star Comms shard live in the web portal: whether the
 operation is open, which nets exist, and who is on each one. Officers can also run the op from
 here: assign people to nets, open or close the operation, send ACARS messages, save and apply
-<strong>presets</strong>, and set <strong>role rules</strong> that put everyone with a Discord role on a net.</p>
+<strong>presets</strong>, set <strong>role rules</strong> that put everyone with a Discord role on a net, and run a
+<strong>Ready Check</strong>.</p>
 <p>You'll find it under <strong>Events &amp; Ops → Comms Ops</strong>. It appears once your server has linked its
 Star Comms shard (Server Settings → External) and is in the Star Comms beta. The same things are
 available in Discord through the <a href="../../commands/#star-comms-voice-ops-beta"><code>/comms</code> commands</a>.</p>
@@ -1288,16 +1311,19 @@ one of three modes:</p>
 </ul>
 <p>Members then get a <strong>Launch Star Comms</strong> button:</p>
 <ul>
-<li>at the top of the <strong>Comms Ops</strong> page,</li>
+<li>at the top of the <strong>Comms Ops</strong> page, for officers and members alike (hidden while the org has no
+  launch link),</li>
 <li>on the event's <strong>Comms map</strong>,</li>
-<li>on your event posts for Star Comms ops, next to <strong>Get Star Comms</strong>,</li>
+<li>on your event posts for Star Comms ops, next to <strong>Get Star Comms</strong>, including the post that
+  goes up when the op launches,</li>
 <li>under the <code>/comms status</code> reply (only the member who asked sees it).</li>
 </ul>
-<p>The button opens a small Star Org page that hands the link to the Star Comms app. Your browser may
-ask whether to open Star Comms; allow it. On that page:</p>
+<p>The button opens a small Star Org page that shows which shard the link connects to. Check it, then
+click <strong>Connect</strong> to hand the link to the Star Comms app; nothing opens until you click. Your
+browser may ask whether to open Star Comms; allow it. On that page:</p>
 <ul>
-<li><strong>Connect</strong> sends the link again. If Star Comms was closed, it can open without joining your
-  comms; once it has loaded, click <strong>Connect</strong>.</li>
+<li><strong>Connect</strong> sends the link to Star Comms. If Star Comms was closed, it can open without joining
+  your comms; once it has loaded, click <strong>Connect</strong> again.</li>
 <li><strong>Install Star Comms</strong> goes to star-comms.org if the app isn't installed yet.</li>
 <li>If the page says the link doesn't work, go back and use the Launch Star Comms button again.</li>
 </ul>
@@ -1325,7 +1351,8 @@ shard it was made for.</p>
   once, so they appear on the card of <strong>every</strong> net they are on. A blue badge with a microphone
   means that person is transmitting right now. People on no net, or only on nets the shard no
   longer lists, appear under <strong>Unassigned</strong>. If the shard's public net is switched on, it has a
-  card too.</li>
+  card too. On a very large op the page lists the first 500 people on comms and says
+  "Showing 500 of N"; the Connected and net counts still include everyone.</li>
 <li><strong>The last ACARS message</strong> and who sent it.</li>
 </ul>
 <p>Names come from your Discord server: the member's server nickname, else their username. Someone
@@ -1387,15 +1414,39 @@ read-only.</p>
 </li>
 <li><strong>ACARS.</strong> Type up to 280 characters (the counter shows how many you've used) and choose the
   alert type: <strong>Emergency</strong> (the default), <strong>Critical</strong> or <strong>Routine</strong>. It is sent to everyone on
-  comms under your server name. Your server can send <strong>one ACARS message a minute</strong>. After a
+  comms, signed with <strong>your</strong> server nickname (or username). Your server can send <strong>one ACARS message a minute</strong>. After a
   send, the button shows a countdown until the next one is allowed, and the countdown carries
   over if you reload the page.</li>
 </ul>
 <p>If the shard refuses an action (a rejected key, a missing permission on the key, a rate limit),
 the panel shows the reason. Nothing is retried automatically, so an action is never sent twice.</p>
+<h2 id="ready-check-officers">Ready Check (officers)<a class="headerlink" href="#ready-check-officers" title="Permanent link">&para;</a></h2>
+<p>A Ready Check asks everyone on comms whether they're ready. It runs for about <strong>20 seconds</strong>:
+each person answers with their <strong>Ready</strong> or <strong>Not ready</strong> key in the Star Comms client, and
+anyone who doesn't answer in time counts as <strong>AFK</strong>. Ready Check is a feature of <strong>premium</strong>
+Star Comms shards.</p>
+<ol>
+<li>Open the <strong>Ready Check</strong> tab.</li>
+<li>Pick a <strong>Template</strong>. Templates are made in the Star Comms app (they set the message people
+   see and who is asked: everyone, squad leads, admins or certain roles). Star Org can start them
+   but doesn't create or edit them. The hint under the picker shows the message people will see.</li>
+<li>Press <strong>Start Ready Check</strong>. It starts under your name in this server.</li>
+<li>While it runs, the tab counts down and shows each answer as it comes in, grouped as <strong>Not
+   ready</strong>, <strong>AFK</strong>, <strong>Waiting</strong> and <strong>Ready</strong>, with a count for each. Answers can take a second or
+   two to show.</li>
+<li>When time is up, Star Org reads the final result from the shard and shows it, for example
+   "Finished: 9 of 12 ready, 2 not ready, 1 AFK." Press <strong>New check</strong> to run another.</li>
+</ol>
+<p>A Ready Check started in the Star Comms app also shows on this tab, live while it runs, then as
+<strong>Last Ready Check</strong>.</p>
+<p><strong>"Ready Check isn't available on this shard"</strong> means the shard can't run one through the API:
+it isn't a premium shard, or the Owner API key is missing the <code>read:ready-checks</code> and
+<code>write:ready-checks</code> permissions. A server admin adds them to the key in the shard's control
+panel and then runs <strong>Verify permissions</strong> in Server Settings (the message has a button to get
+there). Until then the tab doesn't ask the shard again, so it costs nothing.</p>
 <h2 id="presets-and-role-rules-officers">Presets and role rules (officers)<a class="headerlink" href="#presets-and-role-rules-officers" title="Permanent link">&para;</a></h2>
-<p>Officers see four tabs at the top of the page: <strong>Live</strong> (everything above), <strong>Presets</strong>,
-<strong>Rules</strong> and <strong>Structure</strong>. Members only see the live view. Presets and rules are stored on your
+<p>Officers see five tabs at the top of the page: <strong>Live</strong> (everything above), <strong>Presets</strong>,
+<strong>Rules</strong>, <strong>Structure</strong> and <strong>Ready Check</strong>. Members only see the live view. Presets and rules are stored on your
 shard, not by the bot; the structure is kept by Star Org.</p>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
 <p><strong>Structure</strong> sets how your nets fit together, the way you'd draw your comms plan: for each net,
@@ -1438,7 +1489,7 @@ each team's Discord call hanging off its team's net.</p>
   the grid scrolls sideways inside its box, with the role names kept in view.</p>
 </li>
 <li>
-<p><strong>Star Comms Groups</strong>, at the top, are the groups you set up in the Star Comms app. The tab
+<p><strong>Star Comms Groups</strong>, under <strong>By net</strong>, are the groups you set up in the Star Comms app. The tab
   lists every group that has <strong>auto-assign</strong> turned on and at least one net, with its Discord
   roles, how many members it lists by name, and its nets. This list is <strong>read only</strong>: edit groups
   in the Star Comms admin menu. If the shard can't list its groups (an older shard, or an API key

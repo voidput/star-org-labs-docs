@@ -1128,8 +1128,8 @@ description — plus where it announces and who it pings.</p>
 <td>Start a new template, then build it out with buttons</td>
 </tr>
 <tr>
-<td><code>/create_event &lt;template&gt; &lt;title&gt; [date] [time]</code></td>
-<td>Launch an op from one</td>
+<td><code>/create_event &lt;template&gt; &lt;title&gt; &lt;time&gt; [date]</code></td>
+<td>Launch an op from one; <code>time</code> is required (e.g. <code>20:00 UTC</code>), <code>date</code> defaults to today</td>
 </tr>
 </tbody>
 </table>
@@ -1228,7 +1228,7 @@ still opens the single form.</p>
 </tr>
 <tr>
 <td><code>/recurring create &lt;name&gt; &lt;cron&gt; [days]</code></td>
-<td>Create one — e.g. <code>0 20 * * 5</code> is Friday 20:00</td>
+<td>Create one. <code>cron</code> is a cron line (minute hour day month weekday) in <strong>UTC</strong>, e.g. <code>0 20 * * 5</code> is Fridays 20:00 UTC. To schedule in your own timezone (and follow daylight saving), use <strong>Create Schedule</strong> on the web instead.</td>
 </tr>
 <tr>
 <td><code>/recurring add_template &lt;id&gt; &lt;template&gt;</code></td>

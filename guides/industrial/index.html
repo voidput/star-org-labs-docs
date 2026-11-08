@@ -814,6 +814,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#industry-hub-the-internal-market" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1132,6 +1143,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#industry-hub-the-internal-market" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1263,7 +1285,8 @@ The reply is only visible to you.</p>
 <p><strong>Reviewing (Industry Management).</strong> Officers, and ranks granted <em>Industry Management</em>, open
 <strong>Deliveries</strong> and <strong>Accept</strong> or <strong>Reject</strong> each one. Accepted SCU fills the order's progress
 bar; when it reaches the target, the order moves to <strong>Awaiting approval</strong> by itself. The
-assignee or the poster can also press <strong>Mark done</strong> at any time.</p>
+assignee or the poster can also press <strong>Mark done</strong> at any time. Once an order is awaiting
+approval, only Industry Management can move it again: they approve it or send it back.</p>
 <p><strong>Approving.</strong> <strong>Approve</strong> completes the order and pays the reward from the
 <a href="../org-command/#org-treasury">Treasury</a> to <strong>one</strong> member — the assignee, or (if nobody took the
 job) a member with an accepted delivery you pick. If the treasury can't cover it, approval is
@@ -1310,7 +1333,7 @@ API, so the stockpile is <strong>what your members record</strong>: member-enter
   The nightly reconcile's own corrections can't be reversed (the next run would redo them); fix
   the movement that caused the drift instead. Stock held by someone who has left the org can
   still be withdrawn or adjusted.</li>
-<li>Server Settings → <strong>Org Stockpile</strong>: deposit org-run session yield (on), officers confirm member
+<li>Server Settings → <strong>Features → Org Stockpile</strong>: deposit org-run session yield (on), officers confirm member
   deposits (off), nightly reconcile corrects drift (on). If your crew sells its haul <em>and</em>
   deposits it, it counts twice — turn session deposits off if you sell everything.</li>
 <li>The <strong>Global Server Wipe</strong> also empties the stockpile and its history.</li>
@@ -1412,6 +1435,11 @@ org you're in. An org sees it only while you're opted in as a crafter there.</p>
 owns each blueprint — only members who opted in as crafters are listed. Officers assigning a
 request see the crafters who own its blueprint first.</p>
 <hr />
+<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
+<p><em>Industry v2.</em> A catalogue of every mineable and refined material in the current game build:
+where to mine it, its quality bands and the crafting recipes that use it. Open a material for
+the detail.</p>
+<hr />
 <h2 id="industry-hub-the-internal-market">Industry Hub &amp; the internal market<a class="headerlink" href="#industry-hub-the-internal-market" title="Permanent link">&para;</a></h2>
 <p>The Industry Hub is the module's landing surface, and it carries the <strong>Internal Org Market</strong>:
 a WTB/WTS classifieds board for your members. List what you're selling, cancel it when it's
@@ -1424,8 +1452,9 @@ slash-command option, so it doesn't land in Discord's command history.</p>
 <p><code>/mining materials</code> shows current estimated prices and game stats — base signature,
 instability, resistance, mining type — sorted by value.</p>
 <div class="admonition info">
-<p class="admonition-title">Mining Tools is a toggle</p>
-<p><code>/mining materials</code> and <code>/mining rock</code> need <strong>Mining Tools</strong> enabled for your server.
+<p class="admonition-title">Mining Tracker is a toggle</p>
+<p><code>/mining materials</code> and <code>/mining rock</code> need <strong>Mining Tracker</strong> enabled for your server
+(Server Settings → Features → Module Controls; <code>/settings view</code> shows it as Mining Tools).
 <code>/mining start</code> is officer-only. If a command doesn't appear or answers that your rank
 lacks access, check with your leadership — see <a href="../../permissions/">Roles &amp; Permissions</a>.</p>
 </div>

@@ -607,6 +607,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#games-and-event-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Games and event shapes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cancelling-and-un-cancelling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1110,6 +1121,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#games-and-event-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Games and event shapes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cancelling-and-un-cancelling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1205,8 +1227,9 @@ form and on <a href="../templates-and-recurring/">templates</a>. See
 <li><strong>Vehicle slots</strong> — ships the op needs, which members fill from their
   <a href="../fleet/">Personal Hangar</a></li>
 </ul>
-<p>Prefer Discord? <code>/create_event &lt;template&gt; &lt;title&gt; [date] [time]</code> launches an op from a saved
-<a href="../templates-and-recurring/">template</a>. Date defaults to <strong>today</strong>, time to <strong>20:00 UTC</strong>.</p>
+<p>Prefer Discord? <code>/create_event &lt;template&gt; &lt;title&gt; &lt;time&gt; [date]</code> launches an op from a saved
+<a href="../templates-and-recurring/">template</a>. You must give a time (e.g. <code>20:00 UTC</code>); the date
+defaults to <strong>today</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Build it once, reuse it forever</p>
 <p>Almost nobody builds an op from scratch twice. Save the shape as a <strong>template</strong> and
@@ -1276,6 +1299,12 @@ they can make.</p>
   open.</li>
 <li><strong>Auto-launch</strong> — if your attendees are sitting in the meetup channel at start time, the
   op launches on its own.</li>
+<li><strong>Auto-cancel and auto-end</strong> — with <strong>Enable Lifecycle Automation</strong> on (Server Settings →
+  Features, on by default), an op whose Meet Up channel is still empty 15 minutes after its
+  start time (the <strong>Auto-Cancel Timeout</strong>) is cancelled automatically and signups are told. A
+  launched op ends by itself once its voice channels are empty and at least the <strong>Auto-End
+  Buffer</strong> (60 minutes by default) has passed since launch, and never runs more than 12 hours
+  past its planned end. Turn automation off if your crew gathers somewhere else.</li>
 <li><strong>Repost</strong> — <code>/refresh_event_embed &lt;id&gt;</code> puts the event back at the bottom of a busy
   channel.</li>
 </ul>
@@ -1341,16 +1370,24 @@ instead of in a leader's head.</p>
   (replace or append). There are no built-in checklists — what you write is yours.</li>
 <li><strong>Run it.</strong> The checklist sits above the roster on the event, for everyone who can see
   the op. Members claim, count and complete their own team's objectives (or anyone's
-  unassigned ones) from the web, or from the checklist message in the event's Discord
-  thread. Leaders can add, edit, reorder and import at any time.</li>
+  unassigned ones) from the web, or from the checklist message in Discord. That message
+  goes to your server's <strong>AAR channel</strong> when after-action reports are on and an AAR
+  channel is set, so team leads who can only read the event channel can still use it:
+  picking, claiming and completing need only permission to <em>see</em> the channel, not to
+  post in it. With no AAR channel it goes in the event's thread, or beside the event
+  post. Ops that already had a checklist message keep it where it is. Leaders can add,
+  edit, reorder and import at any time. In Discord, <code>/checklist show &lt;event&gt;</code> shows an
+  op's checklist only to you, and <code>/checklist claim</code> and <code>/checklist done</code> claim or
+  complete an open objective on one of your live ops (start typing to pick).</li>
 <li><strong>🔒 means waiting.</strong> A locked objective can't be started until everything it depends on
-  is done. The moment the last one finishes, the team is pinged in the thread. On a Star
+  is done. The moment the last one finishes, the team is pinged where the checklist
+  message is. On a Star
   Comms op a leader can also turn on <strong>ACARS on unlock</strong> — note that ACARS goes to the
   whole shard, so everyone on it sees the objective's title, and it shares your org's one
   ACARS per minute.</li>
 <li><strong>In the AAR channel.</strong> When the op ends and your server has an AAR channel, the
-  after-action report posted there carries the full objective readout, so people who
-  never opened the event thread still see it. Every objective is listed with its team
+  after-action report posted there carries the full objective readout, usually right
+  under the checklist message (now marked final). Every objective is listed with its team
   and its state at the close: ✅ <strong>Completed</strong> (by whom, and when), 🟡 <strong>Not completed ·
   claimed</strong> (who had it, and since when), ⛔ <strong>Not completed · blocked</strong>, or ⬜ <strong>Not
   completed · not started</strong>. An objective nobody clicked isn't dropped; it shows as not
@@ -1372,9 +1409,10 @@ instead of in a leader's head.</p>
 scans the event's voice channels and records who was actually there. That includes
 <strong>walk-ins</strong>: people who never signed up but flew anyway are credited too, and listed on
 the report.</p>
-<p><strong>The after-action report.</strong> When the op ends, the Mission Lead gets a DM asking for an
-AAR. Fill in the short web form and it posts to your AAR channel with the attendance
-attached, and is kept for your org's stats.</p>
+<p><strong>The after-action report.</strong> When the op ends, every lead on the roster gets a DM with an
+<strong>Add After-Action Notes</strong> button. Press it, fill in the short pop-up in Discord, and the
+report posts to your AAR channel with the attendance attached, and is kept for your org's
+stats.</p>
 <p><strong>Anonymous feedback.</strong> If your server has event feedback enabled, the finished event shows
 a <strong>Give Feedback</strong> button. Participants (anyone signed up who did not decline, plus anyone
 recorded as attending) leave a 1–5 rating and an optional comment, stored
@@ -1387,12 +1425,28 @@ that started longer ago than that are deleted, with their signups and notes. Sup
 sponsoring your server add to the window (see the <a href="../../faq/#what-does-it-cost">FAQ</a>). The
 <strong>Completed</strong> tab says so on a free server.</p>
 <hr />
+<h2 id="games-and-event-shapes">Games and event shapes<a class="headerlink" href="#games-and-event-shapes" title="Permanent link">&para;</a></h2>
+<p>Star Org Labs started with Star Citizen and now supports more than one game. Pick your org's
+games during setup, or later in <strong>Server Settings → Games</strong>. World of Warcraft is in preview
+and switched on per server.</p>
+<p>In a multi-game server, each event and template has a game and a <strong>shape</strong>:</p>
+<ul>
+<li><strong>Fleet</strong> — the classic op: groups, roles and ship slots.</li>
+<li><strong>Roster</strong> — a raid roster. Signups can be <strong>open</strong> (everyone who signs up is in) or
+  <strong>curated</strong> (signups wait in a pending column until a leader confirms or benches them). A
+  roster can require a Mythic+ score, and World of Warcraft signups show each character's
+  Raider.IO score.</li>
+<li><strong>RSVP</strong> — no teams, just <strong>going</strong>, <strong>maybe</strong> and <strong>can't</strong>. Only people who are going count
+  against a limit.</li>
+</ul>
+<p>The Loot Hub, Industrial, Fleet and Threat Intel tools are Star Citizen only.</p>
+<hr />
 <h2 id="cancelling-and-un-cancelling">Cancelling — and un-cancelling<a class="headerlink" href="#cancelling-and-un-cancelling" title="Permanent link">&para;</a></h2>
 <p><code>/delete_event &lt;id&gt;</code> (or the web equivalent) <strong>cancels</strong> an op. It notifies your signups and
 tears down the Discord channels, announcement and scheduled event — but it does <strong>not</strong>
 throw anything away. The event, its signups and its attendance all survive; it renders
-struck through with a <code>CANCELLED</code> badge, and you can <strong>restore it from the web app</strong> if the
-call was premature.</p>
+struck through with a <code>CANCELLED</code> badge, and a <strong>server admin</strong> can restore it from the web
+app if the call was premature.</p>
 <hr />
 <h2 id="flying-with-other-orgs">Flying with other orgs<a class="headerlink" href="#flying-with-other-orgs" title="Permanent link">&para;</a></h2>
 <p>Events can be <strong>shared with allied orgs</strong> through the Alliance Hub, so a joint op has one

@@ -1262,7 +1262,7 @@ own account.</p>
 </table>
 <hr />
 <h2 id="mining-industry">⛏️ Mining &amp; industry<a class="headerlink" href="#mining-industry" title="Permanent link">&para;</a></h2>
-<p><em>Available when your server has <strong>Mining Tools</strong> turned on.</em></p>
+<p><em>Available when your server has <strong>Mining Tracker</strong> turned on (Server Settings → Features → Module Controls; <code>/settings view</code> shows it as Mining Tools).</em></p>
 <table>
 <thead>
 <tr>
@@ -1283,6 +1283,18 @@ own account.</p>
 <td><code>/mining rock &lt;signature&gt; [laser_power]</code></td>
 <td>Decode an <strong>RSIG</strong> signature or radar ping — mass, composition, and (with laser power) whether you can crack it.</td>
 </tr>
+<tr>
+<td><code>/workorder deliver &lt;order&gt; &lt;scu&gt; [quality] [location] [note]</code></td>
+<td>Log the SCU you delivered against a material work order <em>(Industry v2 servers)</em>.</td>
+</tr>
+<tr>
+<td><code>/stockpile deposit &lt;material&gt; &lt;scu&gt; [quality] [location] [note]</code></td>
+<td>Record material you hold for the org <em>(Industry v2 servers)</em>.</td>
+</tr>
+<tr>
+<td><code>/craft request &lt;item&gt; &lt;quantity&gt; [min_quality] [deadline] [notes]</code></td>
+<td>Ask your org's crafters for an item <em>(Industry v2 servers)</em>.</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -1302,8 +1314,8 @@ is in the Star Comms beta. Every answer is private to you.</em></p>
 <td>Is the operation open, how many are connected, and who is on which net. Has a <strong>Launch Star Comms</strong> button when your server made a launch link.</td>
 </tr>
 <tr>
-<td><code>/comms roster [net]</code></td>
-<td>Everyone connected, grouped by net (🎙️ = transmitting). Pick a net to see just that one.</td>
+<td><code>/comms roster [net] [refresh]</code></td>
+<td>Everyone connected, grouped by net (🎙️ = transmitting). Pick a net to see just that one. Set <code>refresh</code> to read the shard now instead of the live copy (about 10 seconds old).</td>
 </tr>
 <tr>
 <td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 4a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5.13 12A9.7 9.7 0 0 1 12 20.92 9.7 9.7 0 0 1 6.87 17c-.34-.5-.63-1-.87-1.53 0-1.65 2.71-3 6-3s6 1.32 6 3c-.24.53-.53 1.03-.87 1.53"/></svg></span> <code>/comms assign &lt;member&gt; &lt;net&gt; [minutes]</code></td>
@@ -1440,16 +1452,24 @@ command does what the matching panel button does, and every answer is private to
 <td>Close your ticket when it's sorted.</td>
 </tr>
 <tr>
+<td><code>/ticket reopen</code></td>
+<td>Reopen a closed ticket (anyone who could close it).</td>
+</tr>
+<tr>
 <td><code>/boosts</code></td>
 <td>See your <strong>Patreon boost slots</strong> and the servers you sponsor.</td>
 </tr>
 <tr>
 <td><code>/guild boost</code></td>
-<td>Spend a boost slot to <strong>support this server</strong> (raises its capacity).</td>
+<td>Spend a boost slot on this server so it keeps its history longer.</td>
 </tr>
 <tr>
 <td><code>/guild unboost</code></td>
 <td>Reclaim a boost slot to use somewhere else.</td>
+</tr>
+<tr>
+<td><code>/guild status</code></td>
+<td>See who sponsors this server and how many days of detailed history it keeps.</td>
 </tr>
 </tbody>
 </table>
@@ -1465,18 +1485,30 @@ command does what the matching panel button does, and every answer is private to
 <tbody>
 <tr>
 <td><code>/wheel &lt;names&gt; [mode]</code></td>
-<td>Spin a wheel over names you type and pick a winner. <code>mode</code>: <strong>Spin to Win</strong> or <strong>Elimination</strong>.</td>
+<td>Spin a wheel over names you type and pick a winner. <code>mode</code> (<strong>Spin to Win</strong> or <strong>Elimination</strong>) is shown on the result, but both currently pick one winner in a single spin.</td>
 </tr>
 <tr>
 <td><code>/permission</code></td>
 <td>Check whether the bot has every permission it needs here, and what's missing.</td>
+</tr>
+<tr>
+<td><code>/lookup &lt;handle&gt; [public]</code></td>
+<td>Who is this RSI handle, and is it on your server's threat list? Replies only to you; officers can set <code>public</code> to post it in the channel. Needs Threat Intel.</td>
+</tr>
+<tr>
+<td><code>/checklist show &lt;event&gt;</code></td>
+<td>Show an op's objective checklist, only to you.</td>
+</tr>
+<tr>
+<td><code>/checklist claim &lt;objective&gt;</code> · <code>/checklist done &lt;objective&gt;</code></td>
+<td>Claim or complete an open objective on one of your live ops (start typing to pick).</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="running-ops-officers"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 4a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5.13 12A9.7 9.7 0 0 1 12 20.92 9.7 9.7 0 0 1 6.87 17c-.34-.5-.63-1-.87-1.53 0-1.65 2.71-3 6-3s6 1.32 6 3c-.24.53-.53 1.03-.87 1.53"/></svg></span> Running ops (Officers)<a class="headerlink" href="#running-ops-officers" title="Permanent link">&para;</a></h2>
 <p>Organize events, templates, recurring runs, and loot.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Events</label><label for="__tabbed_1_2">Recurring events</label><label for="__tabbed_1_3">Loot Hub</label><label for="__tabbed_1_4">Threat Intel</label><label for="__tabbed_1_5">Sponsorship</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Events</label><label for="__tabbed_1_2">Recurring events</label><label for="__tabbed_1_3">Loot Hub</label><label for="__tabbed_1_4">Threat Intel</label><label for="__tabbed_1_5">Tickets</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -1488,8 +1520,8 @@ command does what the matching panel button does, and every answer is private to
 </thead>
 <tbody>
 <tr>
-<td><code>/create_event &lt;template&gt; &lt;title&gt; [date] [time]</code></td>
-<td>Launch an op from a saved template. Defaults to <strong>today at 20:00 UTC</strong>.</td>
+<td><code>/create_event &lt;template&gt; &lt;title&gt; &lt;time&gt; [date] [create_thread]</code></td>
+<td>Launch an op from a saved template. <code>time</code> is required (e.g. <code>20:00 UTC</code>); <code>date</code> defaults to <strong>today</strong>. <code>create_thread</code> also opens a Discord discussion thread.</td>
 </tr>
 <tr>
 <td><code>/delete_event &lt;id&gt;</code></td>
@@ -1537,7 +1569,7 @@ command does what the matching panel button does, and every answer is private to
 </tr>
 <tr>
 <td><code>/recurring create &lt;name&gt; &lt;cron&gt; [days]</code></td>
-<td>Auto-post an event on a schedule (e.g. every Friday night).</td>
+<td>Auto-post an event on a schedule. <code>cron</code> is a cron line (minute hour day month weekday) in <strong>UTC</strong>, e.g. <code>0 20 * * 5</code> is Fridays 20:00 UTC. To schedule in your own timezone (and follow daylight saving), use <strong>Create Schedule</strong> on the web instead.</td>
 </tr>
 <tr>
 <td><code>/recurring add_template &lt;id&gt; &lt;template&gt;</code></td>
@@ -1584,15 +1616,15 @@ command does what the matching panel button does, and every answer is private to
 </thead>
 <tbody>
 <tr>
-<td><code>/loot create &lt;name&gt; [event] [points] [sync_vc]</code></td>
-<td>Start a loot session. <code>sync_vc</code> adds everyone in your voice channel.</td>
+<td><code>/loot create &lt;name&gt; [event_id] [points] [sync_vc] [admin_only]</code></td>
+<td>Start a loot session. <code>sync_vc</code> adds everyone in your voice channel; <code>admin_only</code> runs it without a seat for you.</td>
 </tr>
 <tr>
 <td><code>/loot roll &lt;session&gt;</code></td>
 <td>Run the fair, weighted roll.</td>
 </tr>
 <tr>
-<td><code>/loot next_round &lt;session&gt; [points]</code></td>
+<td><code>/loot next_round &lt;session&gt; [increment]</code></td>
 <td>Move to the next round and top up points.</td>
 </tr>
 <tr>
@@ -1624,6 +1656,14 @@ command does what the matching panel button does, and every answer is private to
 <td><code>/kos remove &lt;target&gt;</code></td>
 <td>Take a pilot or org off your server's threat list.</td>
 </tr>
+<tr>
+<td><code>/kos list</code></td>
+<td>The threat list, worst first.</td>
+</tr>
+<tr>
+<td><code>/scoreboard</code></td>
+<td>How your server's threat list breaks down.</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1637,8 +1677,20 @@ command does what the matching panel button does, and every answer is private to
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>/ticket claim [member]</code></td>
+<td>Claim a ticket, or assign it to someone else <em>(staff: officers or the category's manager role)</em>.</td>
+</tr>
+<tr>
+<td><code>/ticket unclaim</code></td>
+<td>Release a ticket back to the queue <em>(staff)</em>.</td>
+</tr>
+<tr>
+<td><code>/ticket panel send</code></td>
+<td>Post an <strong>Open a ticket</strong> button panel in a channel.</td>
+</tr>
+<tr>
+<td><code>/ticket panel update</code></td>
+<td>Refresh a posted panel after you change categories.</td>
 </tr>
 </tbody>
 </table>
@@ -1657,7 +1709,7 @@ command does what the matching panel button does, and every answer is private to
 <tbody>
 <tr>
 <td><code>/setup</code></td>
-<td>Set the events channel, AAR channel, officer role or admin role in one go. With no options it links to the web setup wizard instead. Discord shows it to members with <strong>Manage Server</strong>; if your Admin role doesn't have that permission, grant it the command in <strong>Server Settings → Integrations</strong>.</td>
+<td>Set the events channel, AAR channel, officer role or admin role in one go. With no options it links to the web setup wizard instead. Discord shows it to members with <strong>Manage Server</strong>; if your Admin role doesn't have that permission, grant it the command in <strong>Discord's</strong> Server Settings → Integrations → Star Org Labs (not the Star Org Labs Server Settings page).</td>
 </tr>
 <tr>
 <td><code>/settings view</code></td>
@@ -1694,6 +1746,18 @@ command does what the matching panel button does, and every answer is private to
 <tr>
 <td><code>/ticket category remove &lt;name&gt;</code></td>
 <td>Delete a category once it has no tickets left.</td>
+</tr>
+<tr>
+<td><code>/roles menu create &lt;name&gt;</code> · <code>add &lt;menu&gt; &lt;role&gt; [emoji]</code> · <code>remove &lt;menu&gt; &lt;role&gt;</code></td>
+<td>Build a self-assign role menu and add or drop its roles.</td>
+</tr>
+<tr>
+<td><code>/roles menu post &lt;menu&gt; [channel]</code> · <code>update &lt;menu&gt;</code> · <code>delete &lt;menu&gt;</code></td>
+<td>Post a menu to a channel, re-render a posted menu, or delete it.</td>
+</tr>
+<tr>
+<td><code>/roles menu list</code></td>
+<td>List this server's role menus (officers can use this one too).</td>
 </tr>
 </tbody>
 </table>

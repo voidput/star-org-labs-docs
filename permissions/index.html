@@ -839,6 +839,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#keeping-discord-roles-and-ranks-in-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keeping Discord roles and ranks in step
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -987,6 +998,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#keeping-discord-roles-and-ranks-in-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keeping Discord roles and ranks in step
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1020,12 +1042,12 @@
 <tr>
 <td><strong>Member</strong></td>
 <td>Everyone in your org</td>
-<td>Join events, use the loot hub, industry tools, voice tools, track their own career</td>
+<td>Join events, use the loot hub, industry tools and voice tools, read Comms Ops, the Alliance Hub and Threat Intel, and track their own career</td>
 </tr>
 <tr>
 <td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 4a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5.13 12A9.7 9.7 0 0 1 12 20.92 9.7 9.7 0 0 1 6.87 17c-.34-.5-.63-1-.87-1.53 0-1.65 2.71-3 6-3s6 1.32 6 3c-.24.53-.53 1.03-.87 1.53"/></svg></span> <strong>Officer</strong></td>
 <td>Your event &amp; loot organizers</td>
-<td>Everything members can, plus the staff surfaces — tickets, treasury, roster, recruitment, attendance, fleet dashboard, org chart, <strong>Voice Hubs</strong>, a <strong>view-only</strong> Role Menus page, and a <strong>view-only</strong> Server Settings</td>
+<td>Everything members can, plus the staff surfaces — tickets, treasury, roster, recruitment, attendance, fleet dashboard, org chart, <strong>Voice Hubs</strong>, a <strong>view-only</strong> Role Menus page, and a <strong>view-only</strong> Server Settings (officers don't get the settings cog — open it from a link an admin shares, or <code>/guilds/&lt;server&gt;/settings</code>)</td>
 </tr>
 <tr>
 <td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 1 9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5zm4 13H8v1.5c0 .27.19.46.47.5h6.96c.31 0 .52-.16.57-.41V14m1-6-2.67 2.67L12 8.34l-2.33 2.33L7 8l1 5h8z"/></svg></span> <strong>Admin</strong></td>
@@ -1035,13 +1057,14 @@
 </tbody>
 </table>
 <p>Officer and Admin are mapped from your Discord roles in <strong>Server Settings → Core → Access &amp; Roles</strong>. Members with Discord's <em>Manage Server</em> or <em>Administrator</em> permission count automatically.</p>
+<p>If you remove the bot and add it back later, nobody keeps Officer or Admin from before. The server owner has Admin straight away. Everyone else gets their tier back from the Discord roles they hold now, usually within a few seconds of the bot rejoining. Ranks and personal settings are kept.</p>
 <h2 id="advanced-mode-permissions-per-rank">Advanced mode: permissions per rank<a class="headerlink" href="#advanced-mode-permissions-per-rank" title="Permanent link">&para;</a></h2>
 <p>Bigger orgs often want more nuance than three tiers — a Logistics rank that can view the treasury, or a probationary rank that can't open loot sessions yet. That's <strong>Advanced</strong> mode:</p>
 <ul>
 <li>Every <strong>rank</strong> in your org chart gets its own set of feature toggles, managed in a matrix on <strong>Server Settings → Permissions</strong>.</li>
 <li>Members with <strong>no rank</strong> have their own pinned row in the matrix, so nobody falls through the cracks.</li>
 <li>Grants work both ways: you can <strong>open staff surfaces</strong> (like the treasury view) to a trusted rank, or <strong>restrict member surfaces</strong> (like events) from one.</li>
-<li><strong>Management</strong> can be delegated too: the <em>Events Management</em> and <em>Loot Management</em> toggles let a rank run recurring schedules, roulette, and loot sessions without making them full officers, <em>Voice Hub Management</em> opens the Voice Hubs page to a rank, and <em>Industry Management</em> lets a rank approve work orders and payouts and run the org stockpile, reorder thresholds and crafting assignments as those Industry features roll out.</li>
+<li><strong>Management</strong> can be delegated too: the <em>Events Management</em> and <em>Loot Management</em> toggles let a rank run recurring schedules, roulette, and loot sessions without making them full officers, <em>Voice Hub Management</em> opens the Voice Hubs page to a rank, and <em>Industry Management</em> lets a rank approve work orders and payouts and run the org stockpile, reorder thresholds and crafting assignments as those Industry features roll out. <em>Comms Management</em> lets a rank run Star Comms ops (assignments, open/close, ACARS, presets, rules), and <em>Threat Intel Management</em> lets a rank add and edit threat verdicts and dossiers.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">You can't lock yourself out</p>
@@ -1055,6 +1078,22 @@
 <li>Deleting a rank discards its toggles; its members follow the "Unranked members" row until they're re-ranked.</li>
 <li>In Discord, a member whose rank lacks a module can still <em>see</em> its slash commands — running one just answers privately that their rank doesn't have access.</li>
 </ul>
+<h2 id="keeping-discord-roles-and-ranks-in-step">Keeping Discord roles and ranks in step<a class="headerlink" href="#keeping-discord-roles-and-ranks-in-step" title="Permanent link">&para;</a></h2>
+<p>You can tie your org's ranks to Discord roles so the two don't drift apart:</p>
+<ol>
+<li>On the <strong>Org Chart</strong>, map a Discord role to each rank.</li>
+<li>In <strong>Server Settings → Permissions → Discord role sync</strong>, turn on <strong>Rank sync enabled</strong>
+   and pick a <strong>Default mode</strong>:<ul>
+<li><strong>Discord → rank</strong> — holding the role sets the member's rank.</li>
+<li><strong>Rank → Discord</strong> — promotions give the member the role.</li>
+<li><strong>Both ways</strong> — either side updates the other.</li>
+<li><strong>Off</strong> — no syncing.</li>
+</ul>
+</li>
+<li>Before the first pass re-ranks anyone, you see a preview of what would change and confirm it.</li>
+</ol>
+<p><strong>Strict: no mapped role means no rank</strong> clears a member's rank when they hold none of the
+mapped roles. Leave it off unless you're sure every rank has a role mapped.</p>
 
 
 

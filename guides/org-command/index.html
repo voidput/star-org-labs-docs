@@ -752,6 +752,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#role-menus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role Menus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-intel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threat Intel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#goals" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1086,6 +1108,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#role-menus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role Menus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-intel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threat Intel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#goals" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1157,6 +1201,11 @@ admin territory — see <a href="../../permissions/">Roles &amp; Permissions</a>
 <p><strong>Member Homepage</strong> is a member's own view — their upcoming events, awards and
 notifications, across every org they're in. It's always one click away in the sidebar,
 whatever module you're using.</p>
+<p>A notification that also reaches you as a Discord DM carries one button, named for where it
+goes: <strong>View event</strong>, <strong>Open Loot Hub</strong>, <strong>View your ticket</strong>, <strong>Open Alliance Hub</strong> and so on
+(<strong>View in Star Org</strong> when there is no better name). It opens that page in Star Org. It never
+starts Star Comms; use a <strong>Launch Star Comms</strong> button for that (see
+<a href="../comms-ops/#launch-link-launch-star-comms-button">Comms Ops</a>).</p>
 <p><strong>Org Dashboard</strong> is the org's pulse: what's happening in <em>this</em> server right now.</p>
 <p>Until the server's essentials are in place, admins also see a <strong>Finish setting up</strong> card at the
 top of the Org Dashboard. It lists what's left (the events channel, staff roles, and whether the
@@ -1167,6 +1216,11 @@ everything essential passes. See <a href="../../getting-started/#3-set-up-your-o
 <p>Every member of the org in one list, with their rank, their billet and their history.
 It's the surface you actually use to run the org day to day — find someone, see what they
 fly, check whether they've been showing up.</p>
+<p><strong>RSI org sync.</strong> In <strong>Server Settings → External → RSI Organization Sync</strong>, enter your org's
+SID (e.g. MONKEY), map each RSI rank name to Discord roles and turn on <strong>Auto-Role Sync</strong>.
+Verified members get the roles for their RSI rank automatically, every hour. A member the sync
+can't find in your RSI org twice in a row is marked "RSI: last seen in MONKEY" (your SID) on the roster;
+nothing is removed automatically.</p>
 <hr />
 <h2 id="org-chart">Org Chart<a class="headerlink" href="#org-chart" title="Permanent link">&para;</a></h2>
 <p>Your org's structure, built as <strong>units</strong> containing <strong>billets</strong> — the posts people hold.
@@ -1190,10 +1244,12 @@ hidden from the ladder entirely.</p>
 off, the Promotions page says so and links straight there. When requests are on but no rank
 is marked <strong>Requestable</strong> on the Org Chart, the page points you to the Org Chart to fix it.</p>
 <div class="admonition note">
-<p class="admonition-title">Promotions are a web workflow today</p>
-<p>Approving a promotion updates the member's rank in Star Org Labs. It does <strong>not</strong>
-currently swap their Discord role or announce anything to a channel — that half is on
-the roadmap. Your Discord roles stay yours to manage (or to sync from your RSI org page).</p>
+<p class="admonition-title">Promotions and Discord roles</p>
+<p>If your org uses <strong>Discord role sync</strong> (Server Settings → Permissions; see
+<a href="../../permissions/#keeping-discord-roles-and-ranks-in-step">Roles &amp; Permissions</a>) with a
+rank set to <strong>Rank → Discord</strong> or <strong>Both ways</strong>, approving a promotion also swaps the
+member's mapped Discord role. Otherwise the rank changes only in Star Org Labs. Nothing
+is announced to a channel; the member gets a notification.</p>
 <p><strong>Awards &amp; certifications.</strong> Define your org's medals and qualifications, issue them to
 members, and let members pin them to their profile. Certifications double as
 promotion criteria.</p>
@@ -1202,9 +1258,12 @@ promotion criteria.</p>
 <h2 id="recruitment-hub">Recruitment Hub<a class="headerlink" href="#recruitment-hub" title="Permanent link">&para;</a></h2>
 <p>A public <strong>apply page</strong> for your org and a review queue behind it. Applications land in the
 queue, officers work them, and accepted members flow into the roster.</p>
-<p>Anyone who can open the queue can approve and deny from it: officers and admins, and in advanced
-RBAC mode any rank you grant <strong>Recruitment Hub</strong>. Only officers and admins can choose which rank
+<p>Anyone who can open the queue can approve and deny from it: officers and admins, and, if your
+server uses Advanced permissions, any rank you grant <strong>Recruitment Hub</strong>. Only officers and admins can choose which rank
 an approved applicant lands on. Anyone else approves them onto your org's default joining rank.</p>
+<p>Nobody — officers and admins included — can approve or deny their own application, so the
+buttons don't appear on yours. Each application is decided once: if someone else got to it first,
+you'll be told and the queue refreshes to show the current status.</p>
 <p>The apply page hangs off your org's public website — see the CMS below.</p>
 <hr />
 <h2 id="tickets-support">Tickets &amp; Support<a class="headerlink" href="#tickets-support" title="Permanent link">&para;</a></h2>
@@ -1212,7 +1271,11 @@ an approved applicant lands on. Anyone else approves them onto your org's defaul
 <p><strong>Members</strong> open a ticket with <code>/ticket create [category]</code>. It becomes a Discord thread —
 private or public depending on the category — and replies sync both ways. <code>/ticket close</code>
 closes it when it's sorted. Only the ticket's author, the category's manager role, or an
-officer can close one.</p>
+officer can close one, and anyone who could close it can <code>/ticket reopen</code> it.</p>
+<p>Staff can <code>/ticket claim</code> a ticket (or assign it to someone else) and <code>/ticket unclaim</code> it.
+Officers post an <strong>Open a ticket</strong> button panel with <code>/ticket panel send</code> and refresh it after
+changing categories with <code>/ticket panel update</code>. A category can be set so that once a ticket is
+claimed, only the claimer, the author or an officer can close it.</p>
 <p><strong>Staff</strong> work the same cases as a Kanban board under <strong>Tickets &amp; Support</strong>: statuses,
 priorities, assignment, and <strong>internal notes</strong> that the requester never sees.</p>
 <p><strong>Categories</strong> are yours to define — Recruitment, Griefing Report, Ship Loan, whatever your
@@ -1252,15 +1315,59 @@ turned on.</p>
 </div>
 <hr />
 <h2 id="org-treasury">Org Treasury<a class="headerlink" href="#org-treasury" title="Permanent link">&para;</a></h2>
-<p>A virtual bank in <strong>aUEC</strong>, with a ledger: deposits, withdrawals, taxes and payouts, each
-with who and why. Industrial sessions marked as org runs pay into it automatically when they
-close.</p>
+<p>Open it under <strong>Treasury &amp; Assets</strong>. A virtual bank in <strong>aUEC</strong>, with a ledger: deposits,
+withdrawals, taxes and payouts, each with who and why. Industrial sessions marked as org runs
+pay into it automatically when they close.</p>
+<p><strong>Org Vault</strong> (on the <strong>aUEC &amp; vault</strong> tab). Every org has a vault for items. Loot nobody
+claimed when a session ends is swept in, officers can add items by hand, and <strong>Send to Loot
+Hub</strong> puts an item back into an open session for members to roll on. The vault needs the
+Loot module.</p>
 <p><strong>Materials tab</strong> <em>(rolling out with Industry v2)</em>. Lists the org's material payouts,
 deposits and withdrawals from the <a href="../industrial/#org-stockpile">Org Stockpile</a>, valued at UEX
 prices where known. A material payout — from an approved work order, or made by hand with
 <strong>New material payout</strong> (Industry Management) — is reserved in the stockpile until the member
 <strong>Confirms</strong> they collected it in game; an officer can <strong>Void</strong> one that hasn't been confirmed.
 It's a record, not a transfer: nothing changes in game by itself.</p>
+<hr />
+<h2 id="role-menus">Role Menus<a class="headerlink" href="#role-menus" title="Permanent link">&para;</a></h2>
+<p>Self-assign role menus: members click a button (or react) to give themselves a role, such as
+a game, a timezone or a ping you want. Build menus under <strong>Org Management → Role Menus</strong> and
+post them to a channel. Officers can view menus; admins create and edit them. From Discord,
+admins use <code>/roles menu create</code>, <code>add</code>, <code>remove</code>, <code>post</code>, <code>update</code> and <code>delete</code>, and
+<code>/roles menu list</code> shows every menu.</p>
+<hr />
+<h2 id="threat-intel">Threat Intel<a class="headerlink" href="#threat-intel" title="Permanent link">&para;</a></h2>
+<p><em>Early access: the Star Org Labs team switches it on per server.</em></p>
+<p>Your server's own threat list for PvP. Look up an RSI handle to see who they are and whether
+your org has a verdict on them, keep dossiers, and give pilots or orgs a threat level. Every
+member can read it; adding and editing verdicts is for officers and ranks granted <strong>Threat
+Intel Management</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/lookup &lt;handle&gt; [public]</code></td>
+<td>Who is this RSI handle, and is it on our threat list? Replies only to you; officers can set <code>public</code> to post it.</td>
+</tr>
+<tr>
+<td><code>/kos add</code> · <code>/kos remove</code></td>
+<td>Put a pilot or org on the list, change their level, or take them off <em>(officers)</em></td>
+</tr>
+<tr>
+<td><code>/kos list</code></td>
+<td>The threat list, worst first</td>
+</tr>
+<tr>
+<td><code>/scoreboard</code></td>
+<td>How the list breaks down</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
 <p>Org-wide objectives with material requirements — "we need 4,000 SCU of Quantanium for the
