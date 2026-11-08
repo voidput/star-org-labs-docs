@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -1241,6 +1241,10 @@ takes five steps:</p>
 <li><strong>Review &amp; enable</strong>: everything you chose, with <strong>Edit</strong> to jump back to a step. <strong>Enable</strong>
    starts on only if the check passed.</li>
 </ol>
+<p>Join and leave announcements name the member, and wait a minute before posting. A member whose
+client drops and reconnects within that minute is not announced at all, and a member who joins
+for real is announced once. The bot never posts a join or leave without a name, and posts at most
+six Star Comms announcements a minute per server. Past that, it posts one "…and N more" line.</p>
 <p>Closing the wizard keeps a draft of your answers for next time, except the API key, which is never
 stored in your browser. <strong>Use the full form</strong> switches to the card below.</p>
 <p>Or fill in <strong>Server Settings → External → Star Comms Shard</strong> directly:</p>
@@ -1289,8 +1293,16 @@ one of three modes:</p>
 <li>on your event posts for Star Comms ops, next to <strong>Get Star Comms</strong>,</li>
 <li>under the <code>/comms status</code> reply (only the member who asked sees it).</li>
 </ul>
-<p>If the app isn't installed, the button opens Star Comms' install help instead. <strong>The link is not a
-login:</strong> members still sign in and pass your shard's normal Discord checks. It is only shown in
+<p>The button opens a small Star Org page that hands the link to the Star Comms app. Your browser may
+ask whether to open Star Comms; allow it. On that page:</p>
+<ul>
+<li><strong>Connect</strong> sends the link again. If Star Comms was closed, it can open without joining your
+  comms; once it has loaded, click <strong>Connect</strong>.</li>
+<li><strong>Install Star Comms</strong> goes to star-comms.org if the app isn't installed yet.</li>
+<li>If the page says the link doesn't work, go back and use the Launch Star Comms button again.</li>
+</ul>
+<p>The link's secret part stays in your browser: it isn't sent to Star Org's servers or shown on the
+page. <strong>The link is not a login:</strong> members still sign in and pass your shard's normal Discord checks. It is only shown in
 your own server. Copies of your event posts in allied servers don't carry it.</p>
 <p><strong>Regenerate</strong> makes a new link and revokes the old one, so copies of the old link stop working.
 <strong>Remove</strong> revokes the link, takes the buttons away and switches the mode to <strong>Off</strong>, so Star Org
@@ -1581,10 +1593,10 @@ changed by anyone with the Star Comms admin menu.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.footer", "navigation.sections", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.footer", "navigation.sections", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>
