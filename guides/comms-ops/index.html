@@ -1498,8 +1498,19 @@ each team's Discord call hanging off its team's net.</p>
 <li><strong>Role rules</strong>, below, are set through the Star Comms API, and you edit them here. The Star
   Comms app does not show them.</li>
 </ul>
-<p>Neither is better: role rules suit an org that already manages Discord roles, and Groups can be
-changed by anyone with the Star Comms admin menu.</p>
+<p><strong>Which one wins.</strong> Star Comms keeps whichever assignment happens <em>last</em>:</p>
+<ol>
+<li><strong>Role rules</strong> are applied when someone joins, so anything later replaces them.</li>
+<li><strong>Star Org's assignments</strong> come next: the nets an op puts its signups on, <strong>Assign members</strong>
+   on Comms Ops, and presets.</li>
+<li><strong>Groups with auto-assign</strong> keep re-applying, so they usually win in the end.</li>
+</ol>
+<p>So for nets that change from op to op, let Star Org assign people, and keep auto-assign Groups
+for standing nets that should never change. If a Group with auto-assign covers people an op or
+<strong>Assign members</strong> puts somewhere else, Star Org shows a warning naming the Group: turn off
+auto-assign on that Group in the Star Comms admin menu if Star Org should decide. Role rules
+suit an org that already manages Discord roles; Groups can be changed by anyone with the Star
+Comms admin menu.</p>
 <h3 id="role-rules">Role rules<a class="headerlink" href="#role-rules" title="Permanent link">&para;</a></h3>
 <p>A rule gives a Discord role one or more nets: the shard puts everyone holding that role on them.</p>
 <ul>
