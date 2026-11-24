@@ -1228,8 +1228,13 @@ muster in before launch. Leave it on <strong>Server default</strong> to use your
 <ol>
 <li><strong>What runs:</strong> a name, plus one template or a rotation between missions. With no templates
    yet, it says so and links to Templates.</li>
-<li><strong>When:</strong> daily or chosen weekdays, a time, a timezone and how far ahead the event posts, or
-   a cron expression. You see the next three runs before you save.</li>
+<li><strong>When:</strong> how often, a time, a timezone and how far ahead the event posts. <strong>How often</strong> is
+   every day, weekly on chosen days, every 2–4 weeks on chosen days (counted from a start date),
+   monthly on a date (days 29–31 skip the months that don't have them), or monthly on a weekday
+   (1st–4th or last, e.g. the last Friday). A cron expression is still available, with a
+   <strong>Weeks</strong> picker beside it for every 2–4 weeks. Every few weeks only works with a daily or
+   weekday cron. You see the next three runs before you save. In a cron that sets both a day of
+   the month and a weekday, both must match: <code>0 16 1-7 * 6</code> is the first Saturday of each month.</li>
 <li><strong>Mission vote:</strong> only for a rotation: whether members vote, when the vote closes, the officer
    window and auto-confirm. A close time the vote could never reach is caught here.</li>
 <li><strong>Where it posts:</strong> the announce, vote, ops-board and ping destinations are listed. Open
@@ -1239,8 +1244,15 @@ muster in before launch. Leave it on <strong>Server default</strong> to use your
 </ol>
 <p>The labelled steps along the top show where you are. If you close the wizard partway through it
 asks first, and your answers are kept as a draft: the next <strong>Create Schedule</strong> offers <strong>Resume
-draft</strong> or <strong>Discard draft</strong>. To change an existing schedule, use <strong>Edit</strong> on its card, which
-still opens the single form.</p>
+draft</strong> or <strong>Discard draft</strong>. To change an existing schedule, use <strong>Edit</strong> on its card. It
+still opens the single form, with the same <strong>How often</strong> choices.</p>
+<p>You can also make a one-off event repeat while you create it: pick <strong>Repeat</strong> on the event
+wizard's <strong>When &amp; Where</strong> step (see <a href="../events/#1-plan-the-op">Events &amp; Ops</a>). The event becomes a
+template plus a schedule here, and its first repeat is the run after it.</p>
+<p><strong>Every 2 weeks, how weeks count.</strong> A week is the 7 days from the start date. With every 2 weeks
+from Friday 4 December, the Friday and anything up to the next Thursday is week 0 and runs. The
+following week is skipped, then the pattern repeats. Daylight saving never moves a run to the
+wrong week. Schedule cards read "Every 2 weeks on Fri at 8:00 PM CST" and so on.</p>
 <p>From Discord:</p>
 <table>
 <thead>
@@ -1256,7 +1268,7 @@ still opens the single form.</p>
 </tr>
 <tr>
 <td><code>/recurring create &lt;name&gt; &lt;cron&gt; [days]</code></td>
-<td>Create one. <code>cron</code> is a cron line (minute hour day month weekday) in <strong>UTC</strong>, e.g. <code>0 20 * * 5</code> is Fridays 20:00 UTC. To schedule in your own timezone (and follow daylight saving), use <strong>Create Schedule</strong> on the web instead.</td>
+<td>Create one. <code>cron</code> is a cron line (minute hour day month weekday) in <strong>UTC</strong>, e.g. <code>0 20 * * 5</code> is Fridays 20:00 UTC, <code>0 20 * * 5L</code> the last Friday of the month. To schedule in your own timezone (and follow daylight saving), or every 2–4 weeks, use <strong>Create Schedule</strong> on the web instead.</td>
 </tr>
 <tr>
 <td><code>/recurring add_template &lt;id&gt; &lt;template&gt;</code></td>
