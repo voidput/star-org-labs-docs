@@ -1084,12 +1084,12 @@
 </tr>
 </tbody>
 </table>
-<p>Officer and Admin are mapped from your Discord roles in <strong>Server Settings → Core → Access &amp; Roles</strong>. Members with Discord's <em>Manage Server</em> or <em>Administrator</em> permission count automatically.</p>
+<p>Officer and Admin are mapped from your Discord roles in <strong>Server Settings → Access &amp; Roles</strong>. Members with Discord's <em>Manage Server</em> or <em>Administrator</em> permission count automatically.</p>
 <p>If you remove the bot and add it back later, nobody keeps Officer or Admin from before. The server owner has Admin straight away. Everyone else gets their tier back from the Discord roles they hold now, usually within a few seconds of the bot rejoining. Ranks and personal settings are kept.</p>
 <h2 id="advanced-mode-permissions-per-rank">Advanced mode: permissions per rank<a class="headerlink" href="#advanced-mode-permissions-per-rank" title="Permanent link">&para;</a></h2>
 <p>Bigger orgs often want more nuance than three tiers — a Logistics rank that can view the treasury, or a probationary rank that can't open loot sessions yet. That's <strong>Advanced</strong> mode:</p>
 <ul>
-<li>Every <strong>rank</strong> in your org chart gets its own set of feature toggles, managed in a matrix on <strong>Server Settings → Permissions</strong>.</li>
+<li>Every <strong>rank</strong> in your org chart gets its own set of feature toggles, managed in a matrix on <strong>Server Settings → Access &amp; Roles → Rank permissions</strong>.</li>
 <li>Members with <strong>no rank</strong> have their own pinned row in the matrix, so nobody falls through the cracks.</li>
 <li>Grants work both ways: you can <strong>open staff surfaces</strong> (like the treasury view) to a trusted rank, or <strong>restrict member surfaces</strong> (like events) from one.</li>
 <li><strong>Management</strong> can be delegated too: the <em>Events Management</em> and <em>Loot Management</em> toggles let a rank run recurring schedules, roulette, and loot sessions without making them full officers, <em>Voice Hub Management</em> opens the Voice Hubs page to a rank, and <em>Industry Management</em> lets a rank approve work orders and payouts and run the org stockpile, reorder thresholds and crafting assignments as those Industry features roll out. <em>Comms Management</em> lets a rank run Star Comms ops (assignments, open/close, ACARS, presets, rules), and <em>Threat Intel Management</em> lets a rank add and edit threat verdicts and dossiers.</li>
@@ -1099,7 +1099,7 @@
 <p>Officers and admins always keep their tier's access, whatever the matrix says. Rank toggles only affect regular members — and switching back to Basic instantly restores the classic ladder, keeping your grants saved for later.</p>
 </div>
 <h3 id="turning-it-on">Turning it on<a class="headerlink" href="#turning-it-on" title="Permanent link">&para;</a></h3>
-<p>Advanced mode is rolling out gradually. When it's enabled for your server, the switch lives in <strong>Server Settings → Core → Access &amp; Roles</strong>; flipping it seeds every rank with normal member access, so nothing changes until you start customizing. If the switch tells you it isn't enabled yet, reach out on the <a href="https://discord.gg/BtJST8Hj7E">support Discord</a>.</p>
+<p>Advanced mode is rolling out gradually. When it's enabled for your server, the switch lives in <strong>Server Settings → Access &amp; Roles</strong>; flipping it seeds every rank with normal member access, so nothing changes until you start customizing. If the switch tells you it isn't enabled yet, reach out on the <a href="https://discord.gg/BtJST8Hj7E">support Discord</a>.</p>
 <h3 id="good-to-know">Good to know<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Ranks themselves are created and ordered in <strong>Org Chart</strong> — the Permissions matrix only decides what each rank can use.</li>
@@ -1110,7 +1110,7 @@
 <p>You can tie your org's ranks to Discord roles so the two don't drift apart:</p>
 <ol>
 <li>On the <strong>Org Chart</strong>, map a Discord role to each rank.</li>
-<li>In <strong>Server Settings → Permissions → Discord role sync</strong>, turn on <strong>Rank sync enabled</strong>
+<li>In <strong>Server Settings → Access &amp; Roles → Discord role sync</strong>, turn on <strong>Rank sync enabled</strong>
    and pick a <strong>Default mode</strong>:<ul>
 <li><strong>Discord → rank</strong> — holding the role sets the member's rank.</li>
 <li><strong>Rank → Discord</strong> — promotions give the member the role.</li>
