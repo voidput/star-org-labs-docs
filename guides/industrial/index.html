@@ -1396,11 +1396,13 @@ Citizen has no crafting or blueprint API, so everything here is what members tel
 <li>From Discord: <strong><code>/craft request</code></strong> — pick a blueprint from the list in <code>item</code> (or just type
   the item's name), the quantity, and optionally a minimum quality, a date (<code>2026-12-31</code>) and
   notes. It lands on the same board.</li>
-<li><strong>My crafter profile</strong> — tick <strong>I craft for this org</strong> to join the <strong>Crafters</strong> roster. Pick the
-  blueprint categories you craft (they come from the game files), the best quality you can
-  reach and where your fabricator is. Untick <strong>Taking new requests</strong> to pause without leaving
-  the roster. (If you wrote a "blueprints I own" note before, it is still shown there,
-  read-only — <strong>My blueprints</strong> below replaces it.)</li>
+<li><strong>My crafter profile</strong> — turn on <strong>Share my blueprints with <your org></strong> to join this org's
+  <strong>Crafters</strong> roster and its Blueprint library. It is off until you turn it on, and every org
+  has its own switch. Set where your fabricator is, and untick <strong>Taking new requests</strong> to pause
+  without leaving the roster. The categories you craft and the best quality you can reach are
+  set once for all your orgs on <strong>My Blueprints</strong> (below); the dialog shows them and links
+  there. (If you wrote a "blueprints I own" note before, it is still shown, read-only — your
+  blueprint list replaces it.)</li>
 <li><strong>Claim</strong> — if your server allows it (on by default), you can take an open request yourself
   when you are opted in, taking requests, your max quality is at least the request's minimum,
   and you craft its category — or you <strong>own its blueprint</strong>. The button tells you why when you
@@ -1423,8 +1425,13 @@ Citizen has no crafting or blueprint API, so everything here is what members tel
 <p>You get a notification when your request is taken, ready, delivered or put back on the board.
 If you own the blueprint someone asks for, you get one when they ask.</p>
 <h3 id="my-blueprints">My blueprints<a class="headerlink" href="#my-blueprints" title="Permanent link">&para;</a></h3>
-<p><strong>Crafting → My blueprints</strong> is the list of blueprints your account owns — one list for every
-org you're in. An org sees it only while you're opted in as a crafter there.</p>
+<p><strong>My Blueprints</strong> (in the <strong>Personal</strong> menu, next to Personal Hangar, at <code>/me/blueprints</code>) is
+the list of blueprints your account owns, plus what you craft — one set for every org, and it
+works even if you haven't picked an org. An org sees it only after you turn on <strong>Share my
+blueprints with <org></strong> on that org's Crafting or Blueprint library page. The <strong>Crafter
+details</strong> card at the top is where you pick the blueprint categories you craft (they come
+from the game files) and the best quality you can reach, and it lists the orgs you share
+with. The old <em>Crafting → My blueprints</em> link still works and brings you here.</p>
 <ul>
 <li><strong>Import blueprints → Game logs</strong> — pick your <code>Game.log</code> and any files from the <code>logbackups</code> folder
   (in your Star Citizen folder, e.g. <code>StarCitizen\LIVE\</code>), or a <code>.zip</code> of them, all at once.
@@ -1466,7 +1473,8 @@ org you're in. An org sees it only while you're opted in as a crafter there.</p>
   own and <strong>Save list</strong> as <em>Starter</em>. Use <em>Manual fix</em> for anything else, and untick to remove.</li>
 </ul>
 <p><strong>Blueprint library</strong> (Crafting → Blueprint library) shows what your org can craft and who
-owns each blueprint — only members who opted in as crafters are listed. Officers assigning a
+owns each blueprint — only members who share their blueprints with this org are listed. Your
+own <strong>Share my blueprints with <org></strong> switch sits at the top of the page. Officers assigning a
 request see the crafters who own its blueprint first.</p>
 <hr />
 <h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
